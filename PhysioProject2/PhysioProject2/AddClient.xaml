@@ -1,0 +1,26 @@
+﻿<Window x:Name="addClientForm" x:Class="PhysioProject2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhysioProject2"
+        mc:Ignorable="d"
+        Title="Προθήκη Πελάτη" Height="394.681" Width="376.596" IsEnabled="False">
+    <Grid>
+        <Grid>
+            <Label x:Name="clientNameLbl" Content="Όνομα" HorizontalAlignment="Right" Margin="0,25,296,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientNameTxt" Height="23" Margin="192,31,23,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="nameTxtbox_TextChanged" FontSize="14"/>
+            <Label x:Name="clientSurnameLbl" Content="Επώνυμο" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,0.527" FontSize="14"/>
+            <TextBox x:Name="clientSurnameTxt" HorizontalAlignment="Left" Height="23" Margin="192,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientBirthdayLbl" Content="Ημερομηνία Γέννησης" HorizontalAlignment="Left" Margin="20,114,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <DatePicker x:Name="clientBirthdayPicker" HorizontalAlignment="Left" Margin="192,114,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" Width="154" FontSize="14"/>
+            <Label x:Name="clientPhoneLbl" Content="Τηλέφωνο" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientPhoneTxt" HorizontalAlignment="Left" Height="23" Margin="192,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientDoctorLbl" Content="Ιατρός" HorizontalAlignment="Left" Margin="20,198,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientDoctorTxt" HorizontalAlignment="Left" Height="23" Margin="192,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientDiagnosisLbl" Content="Διάγνωση" HorizontalAlignment="Left" Margin="20,241,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientDiagnosisTxt" HorizontalAlignment="Left" Height="23" Margin="192,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Button x:Name="clientSaveButton" Content="Αποθήκευση" HorizontalAlignment="Left" Margin="192,313,0,0" VerticalAlignment="Top" Width="154" FontSize="14"/>
+        </Grid>
+    </Grid>
+</Window>

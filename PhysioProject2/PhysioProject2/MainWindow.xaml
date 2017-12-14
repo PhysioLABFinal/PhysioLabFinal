@@ -1,0 +1,26 @@
+﻿<Window x:Class="PhysioProject2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhysioProject2"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel  Background="AliceBlue" Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+            <Image Source="http://www.sportslab.net.nz/site/sportslab/images/Made%20in%20the%20lab%20logo%20wrapped%20PNG-638.png" Width="35" Height="35" />
+            <Button Content="Clients" MinWidth="100" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+            <Button Content="Products" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" ></Button>
+            <Button Content="Appointments" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" ></Button>
+            <Button Content="Staff" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="staff_button" ></Button>
+            <Button Content="Payments" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" ></Button>
+            <Button Content="Exit" MinWidth="100" Margin="10,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="exit" ></Button>
+
+        </StackPanel>
+
+        <Frame Background="Beige" x:Name="Main" Margin="0,35,0,0"  NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
