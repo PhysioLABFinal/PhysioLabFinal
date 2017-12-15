@@ -9,7 +9,7 @@
       Title="Products">
 
     <Grid>
-        <TextBlock Foreground="#FFFF1111" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Welcome to the Products page</TextBlock>
+        <TextBlock Foreground="#FFFF1111" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Welcome to the Product page"/>
 
     </Grid>
 </Page>

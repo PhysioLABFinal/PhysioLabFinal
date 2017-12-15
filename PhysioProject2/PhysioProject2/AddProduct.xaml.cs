@@ -23,5 +23,10 @@ namespace PhysioProject2
         {
             InitializeComponent();
         }
+
+        private void productSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
