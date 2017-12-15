@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowState="Maximized"
         WindowStyle="None"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="Auto" Width="Auto">
     <Grid>
         <StackPanel  Background="AliceBlue" Orientation="Horizontal" Height="35" VerticalAlignment="Top">
             <Image Source="http://www.sportslab.net.nz/site/sportslab/images/Made%20in%20the%20lab%20logo%20wrapped%20PNG-638.png" Width="35" Height="35" />

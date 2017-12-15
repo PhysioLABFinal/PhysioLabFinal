@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\Documents\GitHub\PhysioLAB\PhysioProject2\PhysioProject2\obj\Debug\
+C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\
 PhysioProject2
 none
 false
 DEBUG;TRACE
-C:\Users\User\Documents\GitHub\PhysioLAB\PhysioProject2\PhysioProject2\App.xaml
-6-981516877
+C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\App.xaml
+8-1251948550
 
-101209618264
+12688764868
 131569487696
-Appointments.xaml;Clients.xaml;MainWindow.xaml;Payments.xaml;Products.xaml;Staff.xaml;
+AddProduct.xaml;Appointments.xaml;Clients.xaml;MainWindow.xaml;Payments.xaml;Products.xaml;Staff.xaml;AddClient.xaml;
 
 False
 

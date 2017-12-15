@@ -9,7 +9,7 @@
     <Grid>
         <Grid>
             <Label x:Name="clientNameLbl" Content="Όνομα" HorizontalAlignment="Right" Margin="0,25,296,0" VerticalAlignment="Top" FontSize="14"/>
-            <TextBox x:Name="clientNameTxt" Height="23" Margin="192,31,23,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="nameTxtbox_TextChanged" FontSize="14"/>
+            <TextBox x:Name="clientNameTxt" Height="23" Margin="192,31,23,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
             <Label x:Name="clientSurnameLbl" Content="Επώνυμο" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,0.527" FontSize="14"/>
             <TextBox x:Name="clientSurnameTxt" HorizontalAlignment="Left" Height="23" Margin="192,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
             <Label x:Name="clientBirthdayLbl" Content="Ημερομηνία Γέννησης" HorizontalAlignment="Left" Margin="20,114,0,0" VerticalAlignment="Top" FontSize="14"/>
