@@ -31,16 +31,17 @@ namespace PhysioProject2
             SearchTxt.Text = "";
         }
 
-        private void addClient_Click(object sender, RoutedEventArgs e)
-        {
-        //    AddClient add = new AddClient();
-           // add.Show();
-        }
+       
 
         private void ClientdataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ClientInfo info = new ClientInfo();
             info.Show();
+        }
+
+        private void addclieck(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

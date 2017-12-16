@@ -10,7 +10,7 @@
       Background="Beige">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,-146,-79">
         <Label x:Name="label" Content="ΠΕΛΑΤΕΣ" FontSize="40" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="addClient" Content="Προσθήκη Πελάτη" HorizontalAlignment="Left" Margin="12,91,0,0" VerticalAlignment="Top" FontSize="16" Click="addClient_Click"/>
+        <Button x:Name="addClient" Content="Προσθήκη Πελάτη" HorizontalAlignment="Left" Margin="12,91,0,0" VerticalAlignment="Top" FontSize="16" Click="addclieck"/>
         <TextBox x:Name="SearchTxt" HorizontalAlignment="Left" Height="28" Margin="202,91,0,0" TextWrapping="Wrap"  Text="Αναζήτηση..." VerticalAlignment="Top" FontSize="16" FontStyle="Italic" FontWeight="Light" GotFocus="SearchTxt_GotFocus" Width="151"/>
         <DataGrid x:Name="ClientdataGrid" HorizontalAlignment="Left" Height="Auto" Margin="22,136,0,0" FontSize="16" VerticalAlignment="Top" Width="Auto" Background="WhiteSmoke" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" MouseDoubleClick="ClientdataGrid_MouseDoubleClick"/>
     </Grid>
