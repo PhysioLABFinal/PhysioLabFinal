@@ -24,5 +24,11 @@ namespace PhysioProject2
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MonthIncomeOutcome m = new MonthIncomeOutcome();
+            m.Show();
+        }
     }
 }

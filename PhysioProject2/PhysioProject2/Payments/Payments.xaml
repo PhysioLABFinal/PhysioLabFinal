@@ -9,7 +9,11 @@
       Title="Payments">
 
     <Grid>
-        <TextBlock Foreground="#FFFF1111" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Welcome to the Payments page</TextBlock>
-
+        <Label Content="Πληρωμές" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <DataGrid HorizontalAlignment="Left" Height="77" Margin="19,67,0,0" VerticalAlignment="Top" Width="234"/>
+        <Label Content="Εκκρεμής" HorizontalAlignment="Left" Margin="19,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Εξωφλημένες" HorizontalAlignment="Left" Margin="19,170,0,0" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Height="77" Margin="19,201,0,0" VerticalAlignment="Top" Width="234"/>
+        <Button Content="Καταστατικό Μήνα" HorizontalAlignment="Left" Margin="139,19,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click"/>
     </Grid>
 </Page>
