@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Clients\ClientInfo.xaml.cs">
+      <DependentUpon>ClientInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Products\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
@@ -66,9 +69,10 @@
     <Compile Include="Products\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Clients\AddClient.xaml.cs">
-      <DependentUpon>AddClient.xaml</DependentUpon>
-    </Compile>
+    <Page Include="Clients\ClientInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Products\AddProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,10 +105,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Products\Products.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Clients\AddClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

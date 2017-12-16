@@ -98,8 +98,8 @@ C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Appointments\Appointments.g.cs
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\Clients.g.cs
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Payments\Payments.g.cs
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\AddClient.g.cs
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Appointments\Appointments.baml
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\Clients.baml
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Payments\Payments.baml
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\AddClient.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\ClientInfo.g.cs
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\ClientInfo.baml
