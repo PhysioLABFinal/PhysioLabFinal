@@ -103,5 +103,5 @@ C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Payments\Payments.baml
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\ClientInfo.g.cs
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\ClientInfo.baml
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\AddClient.g.cs
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\AddClient.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\Window1.g.cs
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Clients\Window1.baml

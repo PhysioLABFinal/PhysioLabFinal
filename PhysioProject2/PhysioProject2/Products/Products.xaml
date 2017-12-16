@@ -11,7 +11,7 @@
 
     <Grid Margin="-29,0,-16,0" Background="#FFC5AC8F">
         <TextBlock Foreground="#FFFF1111" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="22,-1,23,272">Welcome to the Products page</TextBlock>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="248,39,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.758,0.592" Click="Button_Click"/>
+        <Button Content="Add Product" HorizontalAlignment="Left" Margin="248,39,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.758,0.592" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="113,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113"/>
         <Label Content="PRODUCTS" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.655,0.585" FontWeight="Bold"/>
         <DataGrid HorizontalAlignment="Left" Height="218" Margin="22,72,0,0" VerticalAlignment="Top" Width="300"/>

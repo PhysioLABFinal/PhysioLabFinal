@@ -41,7 +41,8 @@ namespace PhysioProject2
 
         private void addclieck(object sender, RoutedEventArgs e)
         {
-            
+            Window1 win = new Window1();
+            win.Show();
         }
     }
 }

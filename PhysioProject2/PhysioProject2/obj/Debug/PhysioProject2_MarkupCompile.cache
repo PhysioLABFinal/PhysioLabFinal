@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\App.xaml
-8221655142
+81696695625
 
-12-2007059815
+121210063570
 131569487696
-Clients\AddClient.xaml;Clients\ClientInfo.xaml;Products\AddProduct.xaml;Appointments\Appointments.xaml;Clients\Clients.xaml;MainWindow.xaml;Payments\Payments.xaml;Products\Products.xaml;
+Clients\Window1.xaml;Clients\ClientInfo.xaml;Products\AddProduct.xaml;Appointments\Appointments.xaml;Clients\Clients.xaml;MainWindow.xaml;Payments\Payments.xaml;Products\Products.xaml;
 
 False
 
