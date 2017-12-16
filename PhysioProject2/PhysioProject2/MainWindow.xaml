@@ -14,7 +14,6 @@
             <Button Content="Clients" MinWidth="100" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
             <Button Content="Products" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" ></Button>
             <Button Content="Appointments" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" ></Button>
-            <Button Content="Staff" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="staff_button" ></Button>
             <Button Content="Payments" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" ></Button>
             <Button Content="Exit" MinWidth="100" Margin="10,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="exit" ></Button>
 

@@ -24,5 +24,12 @@ namespace PhysioProject2
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+            AddProduct a2 = new AddProduct();
+            a2.ShowDialog();
+        }
     }
 }

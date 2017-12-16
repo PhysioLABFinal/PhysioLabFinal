@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhysioProject2"
         mc:Ignorable="d"
-        Title="Προθήκη Πελάτη" Height="394.681" Width="376.596" IsEnabled="False">
+        Title="Προθήκη Πελάτη"  Height="394.681" Width="376.596" IsEnabled="False">
     <Grid>
         <Grid>
             <Label x:Name="clientNameLbl" Content="Όνομα" HorizontalAlignment="Right" Margin="0,25,296,0" VerticalAlignment="Top" FontSize="14"/>

@@ -46,10 +46,7 @@ namespace PhysioProject2
             Main.Content = new Appointments();
         }
 
-        private void staff_button(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Staff();
-        }
+        
 
         private void payments_button(object sender, RoutedEventArgs e)
         {

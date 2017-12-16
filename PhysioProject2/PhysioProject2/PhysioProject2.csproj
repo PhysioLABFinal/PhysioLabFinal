@@ -54,33 +54,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddProduct.xaml.cs">
+    <Compile Include="Products\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Appointments.xaml.cs">
+    <Compile Include="Appointments\Appointments.xaml.cs">
       <DependentUpon>Appointments.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Payments.xaml.cs">
+    <Compile Include="Payments\Payments.xaml.cs">
       <DependentUpon>Payments.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Products.xaml.cs">
+    <Compile Include="Products\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Staff.xaml.cs">
-      <DependentUpon>Staff.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AddClient.xaml.cs">
+    <Compile Include="Clients\AddClient.xaml.cs">
       <DependentUpon>AddClient.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddProduct.xaml">
+    <Page Include="Products\AddProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Appointments.xaml">
+    <Page Include="Appointments\Appointments.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Clients.xaml">
+    <Page Include="Clients\Clients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,26 +89,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Clients.xaml.cs">
+    <Compile Include="Clients\Clients.xaml.cs">
       <DependentUpon>Clients.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Payments.xaml">
+    <Page Include="Payments\Payments.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Products.xaml">
+    <Page Include="Products\Products.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Staff.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AddClient.xaml">
+    <Page Include="Clients\AddClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
