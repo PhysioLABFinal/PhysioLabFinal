@@ -1,0 +1,18 @@
+﻿<Window x:Class="PhysioProject2.MonthIncomeOutcome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhysioProject2"
+        mc:Ignorable="d"
+        Title="Καταστατικό Μήνα" Height="347.058" Width="249.58">
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" Height="232" Margin="10,10,0,0" VerticalAlignment="Top" Width="210"/>
+        <Label Content="Σύνoλο:" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top"/>
+        <Label Content="Κέρδος:" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="0" HorizontalAlignment="Left" Margin="62,247,0,0" VerticalAlignment="Top"/>
+        <Label Content="0" HorizontalAlignment="Left" Margin="62,268,0,0" VerticalAlignment="Top"/>
+        <Button Content="Εκτύπωση" HorizontalAlignment="Left" Margin="145,263,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
