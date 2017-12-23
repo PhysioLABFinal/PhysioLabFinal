@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhysioProject2"
         mc:Ignorable="d"
-        WindowState="Maximized"
-        WindowStyle="None"
+        WindowState="Normal"
+        WindowStyle="ThreeDBorderWindow"
         Title="MainWindow" Height="Auto" Width="Auto">
     <Grid>
-        <StackPanel  Background="AliceBlue" Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Image Source="http://www.sportslab.net.nz/site/sportslab/images/Made%20in%20the%20lab%20logo%20wrapped%20PNG-638.png" Width="35" Height="35" />
-            <Button Content="Clients" MinWidth="100" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="Products" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" ></Button>
-            <Button Content="Appointments" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" ></Button>
-            <Button Content="Payments" MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" ></Button>
-            <Button Content="Exit" MinWidth="100" Margin="10,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="exit" ></Button>
-
+        <StackPanel  Orientation="Horizontal" Height="100" VerticalAlignment="Top">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="C:\Users\Marianna\Desktop\slider1.jpg" />
+            </StackPanel.Background>
+            <Button Content="Clients" MinWidth="110" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
+            <Button Content="Products" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" Height="30" FontSize="16"></Button>
+            <Button Content="Appointments" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" Height="30" FontSize="16"></Button>
+            <Button Content="Payments" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" Height="30" FontSize="16"></Button>
         </StackPanel>
 
-        <Frame Background="Beige" x:Name="Main" Margin="0,35,0,0"  NavigationUIVisibility="Hidden"/>
+        <Frame Background="AliceBlue" x:Name="Main" Margin="0,100,0,0"  NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

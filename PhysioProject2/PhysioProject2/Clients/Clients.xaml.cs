@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,13 +22,34 @@ namespace PhysioProject2
     /// </summary>
     public partial class Clients : Page
     {
-        public Clients()
+
+		OleDbConnection con;
+		DataTable dt;
+
+		public Clients()
         {
             InitializeComponent();
             this.DataContext = this;
-        }
 
-        private void SearchTxt_GotFocus(object sender, RoutedEventArgs e)
+			con = new OleDbConnection();
+			con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\PhysioDatabase.accdb";
+			BindGrid();
+		}
+
+		private void BindGrid()
+		{
+			OleDbCommand cmd = new OleDbCommand();
+			if (con.State != ConnectionState.Open)
+				con.Open();
+			cmd.Connection = con;
+			cmd.CommandText = "select * from ClientTableDB";
+			OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+			dt = new DataTable();
+			da.Fill(dt);
+			ClientdataGrid.ItemsSource = dt.AsDataView();
+		}
+
+		private void SearchTxt_GotFocus(object sender, RoutedEventArgs e)
         {
             SearchTxt.Text = "";
         }
