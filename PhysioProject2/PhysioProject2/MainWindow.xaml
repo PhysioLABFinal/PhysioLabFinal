@@ -11,12 +11,12 @@
     <Grid>
         <StackPanel  Orientation="Horizontal" Height="100" VerticalAlignment="Top">
             <StackPanel.Background>
-                <ImageBrush ImageSource="C:\Users\Marianna\Desktop\slider1.jpg" />
+                <ImageBrush ImageSource="C:\Users\Marianna\Desktop\slider1.jpg" Stretch="UniformToFill"/>
             </StackPanel.Background>
-            <Button Content="Clients" MinWidth="110" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
-            <Button Content="Products" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" Height="30" FontSize="16"></Button>
-            <Button Content="Appointments" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" Height="30" FontSize="16"></Button>
-            <Button Content="Payments" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" Height="30" FontSize="16"></Button>
+            <Button Content="Πελάτες" MinWidth="110" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
+            <Button Content="Προϊόντα" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" Height="30" FontSize="16"></Button>
+            <Button Content="Ραντεβού" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" Height="30" FontSize="16"></Button>
+            <Button Content="Πληρωμές" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" Height="30" FontSize="16"></Button>
         </StackPanel>
 
         <Frame Background="AliceBlue" x:Name="Main" Margin="0,100,0,0"  NavigationUIVisibility="Hidden"/>

@@ -9,8 +9,27 @@
       Title="Clients">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,-146,-79">
         <Label x:Name="label" Content="ΠΕΛΑΤΕΣ" FontSize="40" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="addClient" Content="Προσθήκη Πελάτη" HorizontalAlignment="Left" Margin="12,91,0,0" VerticalAlignment="Top" FontSize="16" Click="addclieck"/>
-        <TextBox x:Name="SearchTxt" HorizontalAlignment="Left" Height="28" Margin="202,91,0,0" TextWrapping="Wrap"  Text="Αναζήτηση..." VerticalAlignment="Top" FontSize="16" FontStyle="Italic" FontWeight="Light" GotFocus="SearchTxt_GotFocus" Width="151"/>
-        <DataGrid x:Name="ClientdataGrid" HorizontalAlignment="Left" Height="Auto" Margin="22,136,0,0" FontSize="16" VerticalAlignment="Top" Width="Auto" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" MouseDoubleClick="ClientdataGrid_MouseDoubleClick"/>
+        <Button x:Name="addClient" Content="Προσθήκη" HorizontalAlignment="Left" Margin="629,85,-58,0" VerticalAlignment="Top" FontSize="16" Height="28" Width="100" Click="addClient_Click"/>
+        <TextBox x:Name="SearchTxt" HorizontalAlignment="Left" Height="28" Margin="21,85,0,0" TextWrapping="Wrap"  Text="Αναζήτηση..." VerticalAlignment="Top" FontSize="16" FontStyle="Italic" FontWeight="Light" GotFocus="SearchTxt_GotFocus" Width="189" KeyDown="SearchTxt_KeyDown" />
+        <Button x:Name="deleteClient" Content="Διαγραφή" HorizontalAlignment="Left" Margin="734,85,-163,0" VerticalAlignment="Top" Width="100" Height="28" FontSize="16"/>
+        <Button x:Name="editClient" Content="Επεξεργασία" HorizontalAlignment="Left" Margin="839,85,-268,0" VerticalAlignment="Top" Width="100" Height="28" FontSize="16" Click="editClient_Click"/>
+        <DataGrid x:Name="ClientdataGrid" HorizontalAlignment="Left" Height="Auto" Margin="21,152,0,0" FontSize="16" VerticalAlignment="Top" Width="Auto" HeadersVisibility="None" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" MouseDoubleClick="ClientdataGrid_MouseDoubleClick"/>
+        <Grid Margin="600,152,10,-34">
+            <Label x:Name="clientIDLbl" Content="ID" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientIDTxt" Height="23" Margin="192,0,19,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="14" Width="154"/>
+            <Label x:Name="clientNameLbl" Content="Όνομα" HorizontalAlignment="Left" Margin="20,40,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientNameTxt" Height="23" Margin="192,40,19,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="14" Width="154"/>
+            <Label x:Name="clientSurnameLbl" Content="Επώνυμο" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,0.527" FontSize="14"/>
+            <TextBox x:Name="clientSurnameTxt" HorizontalAlignment="Left" Height="23" Margin="192,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientBirthdayLbl" Content="Ημερομηνία Γέννησης" HorizontalAlignment="Left" Margin="20,114,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientBirthdayTxt" HorizontalAlignment="Left" Margin="192,114,0,0" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientPhoneLbl" Content="Τηλέφωνο" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientPhoneTxt" HorizontalAlignment="Left" Height="23" Margin="192,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientDoctorLbl" Content="Ιατρός" HorizontalAlignment="Left" Margin="20,198,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientDoctorTxt" HorizontalAlignment="Left" Height="23" Margin="192,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Label x:Name="clientDiagnosisLbl" Content="Διάγνωση" HorizontalAlignment="Left" Margin="20,241,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="clientDiagnosisTxt" HorizontalAlignment="Left" Height="23" Margin="192,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="14"/>
+        </Grid>
+       
     </Grid>
 </Page>
