@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         WindowState="Normal"
         WindowStyle="ThreeDBorderWindow"
-        Title="MainWindow" Height="Auto" Width="Auto">
+        Title="Φυσιοθεραπευτήριο" Height="Auto" Width="Auto">
     <Grid>
         <StackPanel  Orientation="Horizontal" Height="100" VerticalAlignment="Top">
             <StackPanel.Background>
-                <ImageBrush ImageSource="C:\Users\Marianna\Desktop\slider1.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="slider1.jpg" Stretch="UniformToFill"/>
             </StackPanel.Background>
             <Button Content="Πελάτες" MinWidth="110" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
             <Button Content="Προϊόντα" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" Height="30" FontSize="16"></Button>
