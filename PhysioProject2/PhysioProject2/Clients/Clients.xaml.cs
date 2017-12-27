@@ -25,7 +25,7 @@ namespace PhysioProject2
 			clientIDTxt.IsEnabled = false;
 
 			con = new OleDbConnection();
-			con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+			con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\\Users\\Marianna\\Documents\\GitHub\\PhysioLabFinal\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
 			BindGrid();
 		}
 
@@ -63,6 +63,7 @@ namespace PhysioProject2
 			clientPhoneTxt.Text = "";
 			clientDoctorTxt.Text = "";
 			clientDiagnosisTxt.Text = "";
+			clientCommentsTxt.Text = "";
 			MoreInfo.Visibility = Visibility.Hidden;
 		}
 
@@ -79,6 +80,7 @@ namespace PhysioProject2
 				clientPhoneTxt.Text = row["Telephone"].ToString();
 				clientDoctorTxt.Text = row["Doctor"].ToString();
 				clientDiagnosisTxt.Text = row["Diagnosis"].ToString();
+				clientDiagnosisTxt.Text = row["Comments"].ToString();
 			}
 			else
 			{
@@ -114,6 +116,7 @@ namespace PhysioProject2
 			ClientdataGrid.Columns[4].Visibility = Visibility.Hidden;
 			ClientdataGrid.Columns[5].Visibility = Visibility.Hidden;
 			ClientdataGrid.Columns[6].Visibility = Visibility.Hidden;
+			ClientdataGrid.Columns[7].Visibility = Visibility.Hidden;
 		}
 
 		private void save_Click(object sender, RoutedEventArgs e)
@@ -127,7 +130,7 @@ namespace PhysioProject2
 			{
 				if (clientIDTxt.Text == "")
 				{
-					cmd.CommandText = "insert into ClientTableDB(Cname,CSurname,Birthday,Telephone,Doctor,Diagnosis) Values('" + clientNameTxt.Text + "','" + clientSurnameTxt.Text + "','" + clientBirthdayTxt.Text + "','" + clientPhoneTxt.Text + "','" + clientDoctorTxt.Text + "','" + clientDiagnosisTxt.Text + "')";
+					cmd.CommandText = "insert into ClientTableDB(Cname,CSurname,Birthday,Telephone,Doctor,Diagnosis,Comments) Values('" + clientNameTxt.Text + "','" + clientSurnameTxt.Text + "','" + clientBirthdayTxt.Text + "','" + clientPhoneTxt.Text + "','" + clientDoctorTxt.Text + "','" + clientDiagnosisTxt.Text + "','" + clientCommentsTxt.Text + "')";
 					cmd.ExecuteNonQuery();
 					BindGrid();
 					MessageBox.Show("Ο νέος πελάτης προστέθηκε με επιτυχία!!");
@@ -135,7 +138,7 @@ namespace PhysioProject2
 				}
 				else
 				{
-					cmd.CommandText = "update ClientTableDB set Cname='" + clientNameTxt.Text + "',CSurname='" + clientSurnameTxt.Text + "',Birthday='" + clientBirthdayTxt.Text + "',Telephone='" + clientPhoneTxt.Text + "',Doctor='" + clientDoctorTxt.Text + "',Diagnosis='" + clientDiagnosisTxt.Text + "' where CID=" + clientIDTxt.Text;
+					cmd.CommandText = "update ClientTableDB set Cname='" + clientNameTxt.Text + "',CSurname='" + clientSurnameTxt.Text + "',Birthday='" + clientBirthdayTxt.Text + "',Telephone='" + clientPhoneTxt.Text + "',Doctor='" + clientDoctorTxt.Text + "',Diagnosis='" + clientDiagnosisTxt.Text + "',Comments='" + clientCommentsTxt.Text + "' where CID=" + clientIDTxt.Text;
 					cmd.ExecuteNonQuery();
 					BindGrid();
 					MessageBox.Show("Οι αλλαγές έγιναν με επιτυχία!!");
