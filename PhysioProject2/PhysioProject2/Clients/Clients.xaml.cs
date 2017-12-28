@@ -25,7 +25,7 @@ namespace PhysioProject2
 			clientIDTxt.IsEnabled = false;
 
 			con = new OleDbConnection();
-			con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\\Users\\Marianna\\Documents\\GitHub\\PhysioLabFinal\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+			con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
 			BindGrid();
 		}
 
@@ -157,5 +157,6 @@ namespace PhysioProject2
 			dv.RowFilter = string.Format("CSurname LIKE '{0}*'", SearchTxt.Text);
 			ClientdataGrid.ItemsSource = dv;
 		}
+
 	}
 }
