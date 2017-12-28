@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowState="Normal"
         WindowStyle="ThreeDBorderWindow"
-        Title="PhysioLab" Height="Auto" Width="Auto" Icon="icon.png">
+        Title="PhysioLab" Height="Auto" Width="Auto" Icon="appIcon.ico">
     <Grid>
         <StackPanel  Orientation="Horizontal" Height="100" VerticalAlignment="Top">
             <StackPanel.Background>
