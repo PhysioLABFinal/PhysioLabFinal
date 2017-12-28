@@ -154,7 +154,7 @@ namespace PhysioProject2
 		private void SearchTxt_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			DataView dv = new DataView(dt);
-			dv.RowFilter = string.Format("CSurname LIKE '{0}*'", SearchTxt.Text);
+			dv.RowFilter = string.Format("Surname LIKE '{0}*'", SearchTxt.Text);
 			ClientdataGrid.ItemsSource = dv;
 		}
 
