@@ -12,11 +12,9 @@
         <TextBox x:Name="productNameTxt" HorizontalAlignment="Left" Height="23" Margin="185,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <Label x:Name="productCompanyLbl" Content="Εταιρεία" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Height="30" Width="153" FontSize="14"/>
         <TextBox x:Name="productCompanyTxt" HorizontalAlignment="Left" Height="23" Margin="185,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <Label x:Name="productPhoneLbl" Content="Τηλέφωνο Παραγγελιών" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Height="30" Width="172" FontSize="14"/>
-        <TextBox x:Name="productPhoneTxt" HorizontalAlignment="Left" Height="23" Margin="185,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <Label x:Name="productPriceLbl" Content="Τιμή ανα τεμάχιο" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Height="31" Width="153" FontSize="14"/>
-        <TextBox x:Name="productPriceTxt" HorizontalAlignment="Left" Height="23" Margin="185,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <Button x:Name="productSaveButton" Content="Αποθήκευση" HorizontalAlignment="Left" Margin="185,225,0,0" VerticalAlignment="Top" Width="120" Height="28" FontSize="14"/>
+        <Label x:Name="productPriceLbl" Content="Τιμή ανα τεμάχιο" HorizontalAlignment="Left" Margin="0,122,0,0" VerticalAlignment="Top" Height="31" Width="153" FontSize="14"/>
+        <TextBox x:Name="productPriceTxt" HorizontalAlignment="Left" Height="23" Margin="185,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Button x:Name="productSaveButton" Content="Αποθήκευση" HorizontalAlignment="Left" Margin="185,196,0,0" VerticalAlignment="Top" Width="120" Height="28" FontSize="14" Click="productSaveButton_Click_1"/>
 
     </Grid>
 </Window>

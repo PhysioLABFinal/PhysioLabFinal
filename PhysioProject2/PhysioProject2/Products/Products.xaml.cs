@@ -40,7 +40,7 @@ namespace PhysioProject2
 
         }
 
-        private void BindGrid()
+        public void BindGrid()
         {
             OleDbCommand cmd = new OleDbCommand();
             if (con.State != ConnectionState.Open)
@@ -55,7 +55,9 @@ namespace PhysioProject2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            AddProduct popup = new AddProduct();
+            popup.ShowDialog();
+
         }
     }
 }

@@ -111,19 +111,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Products\PopUpProducts.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Products\Products.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Products\PopUpProducts.xaml.cs">
-      <DependentUpon>PopUpProducts.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Products\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
