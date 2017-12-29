@@ -13,16 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PhysioLab
+namespace PhysioLab.Products
 {
     /// <summary>
-    /// Interaction logic for PrPage.xaml
+    /// Interaction logic for Products.xaml
     /// </summary>
-    public partial class PrPage : Page
+    public partial class Products : Page
     {
-        public PrPage()
+        public Products()
         {
             InitializeComponent();
         }
+
+
+
     }
 }
