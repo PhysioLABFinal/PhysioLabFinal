@@ -6,15 +6,16 @@
          xmlns:local="clr-namespace:PhysioProject2"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Products">
+      Title="Products" Height="auto" Width="auto">
 
     <Grid>
         <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="118,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="139"/>
+        <TextBox Name="SearchProductsTB" HorizontalAlignment="Left" Height="18" Margin="118,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
         <Label Content="ΠΡΟΙΟΝΤΑ&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="108"/>
         <StackPanel HorizontalAlignment="Left" Height="174" Margin="25,91,0,0" VerticalAlignment="Top" Width="246">
-            <DataGrid Height="173" HorizontalAlignment="Left" Width="246"/>
+            <DataGrid x:Name="ProductsDataGrid" Height="173" HorizontalAlignment="Left" Width="246"/>
         </StackPanel>
+        <Button Content="Προσθήκη" HorizontalAlignment="Left" Margin="182,13,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Page>
