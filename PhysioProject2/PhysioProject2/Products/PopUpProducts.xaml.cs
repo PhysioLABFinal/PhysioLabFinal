@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PhysioLab.Products
+namespace PhysioProject2.Products
 {
     /// <summary>
     /// Interaction logic for PopUpProducts.xaml

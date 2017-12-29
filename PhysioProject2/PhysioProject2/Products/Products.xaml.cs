@@ -13,12 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
-using System;
-using System.Data;
 using System.Data.OleDb;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
+
 
 
 namespace PhysioProject2
