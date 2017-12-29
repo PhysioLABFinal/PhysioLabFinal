@@ -72,9 +72,6 @@
     <Compile Include="Payments\Payments.xaml.cs">
       <DependentUpon>Payments.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Products\Products.xaml.cs">
-      <DependentUpon>Products.xaml</DependentUpon>
-    </Compile>
     <Page Include="Clients\Window1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,6 +117,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Products\Products.xaml.cs">
+      <DependentUpon>Products.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

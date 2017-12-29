@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PhysioProject2
+namespace PhysioLab.Products
 {
     /// <summary>
     /// Interaction logic for Products.xaml
@@ -23,13 +23,6 @@ namespace PhysioProject2
         public Products()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-            AddProduct a2 = new AddProduct();
-            a2.ShowDialog();
         }
     }
 }
