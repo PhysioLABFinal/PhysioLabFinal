@@ -38,7 +38,7 @@ namespace PhysioProject2
 
         private void products_button(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Products();
+            Main.Content = new ();
         }
 
         private void appointm_button(object sender, RoutedEventArgs e)
