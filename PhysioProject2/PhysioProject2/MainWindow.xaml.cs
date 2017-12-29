@@ -38,7 +38,8 @@ namespace PhysioProject2
 
         private void products_button(object sender, RoutedEventArgs e)
         {
-            Main.Content = new ();
+
+           // Main.Content = new   
         }
 
         private void appointm_button(object sender, RoutedEventArgs e)
@@ -50,6 +51,7 @@ namespace PhysioProject2
 
         private void payments_button(object sender, RoutedEventArgs e)
         {
+            
             Main.Content = new Payments();
         }
     }
