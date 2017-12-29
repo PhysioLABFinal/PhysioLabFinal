@@ -14,26 +14,24 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Data.OleDb;
-
+using System.Configuration;
+using System.Configuration.Assemblies;
 
 namespace PhysioProject2
 {
+    
     /// <summary>
     /// Interaction logic for AddProduct.xaml
     /// </summary>
     public partial class AddProduct : Window
     {
         OleDbConnection con;
-        DataTable dt;
-
         public AddProduct()
         {
             InitializeComponent();
-            this.DataContext = this;
-
-
             con = new OleDbConnection();
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+
         }
 
         private void productSaveButton_Click(object sender, RoutedEventArgs e)
@@ -44,19 +42,40 @@ namespace PhysioProject2
 
         private void productSaveButton_Click_1(object sender, RoutedEventArgs e)
         {
-            OleDbCommand cmd = new OleDbCommand();
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "insert into Products(Name,Company,PricePerUnit) Values('" + productNameTxt.Text + "','" + productCompanyTxt.Text + "','" + productPriceTxt.Text + "')";
-            cmd.ExecuteNonQuery();
 
-           
+            con.Open();
 
-            Products obj = new Products();
-            obj.ProductsDataGrid.Items.Refresh();
+            // DbCommand also implements IDisposable
+            using (OleDbCommand cmd = con.CreateCommand())
+            {
+                // create command with placeholders
+                cmd.CommandText =
+                   "INSERT INTO Products " +
+                   "([Name], [Company],  [PricePerUnit]) " +
+                   "VALUES(@Name, @Company, @PricePerUnit)";
+
+                // add named parameters
+                String cmp = productCompanyTxt.Text;
+                String nm = productNameTxt.Text;
+                String ppr = productPriceTxt.Text;
+                cmd.Parameters.AddRange(new OleDbParameter[]
+                {
+
+               new OleDbParameter("@Name", nm),
+               new OleDbParameter("@Company", cmp),
+               new OleDbParameter("@PricePerUnit",ppr)
+               
+           });
+
+                // execute
+                cmd.ExecuteNonQuery();
+
+
+            }
+
+
+
             this.Close();
-
 
 
         }
