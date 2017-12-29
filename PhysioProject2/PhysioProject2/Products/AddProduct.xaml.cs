@@ -51,9 +51,7 @@ namespace PhysioProject2
             cmd.CommandText = "insert into Products(Name,Company,PricePerUnit) Values('" + productNameTxt.Text + "','" + productCompanyTxt.Text + "','" + productPriceTxt.Text + "')";
             cmd.ExecuteNonQuery();
 
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            dt = new DataTable();
-            da.Fill(dt);
+           
 
             Products obj = new Products();
             obj.ProductsDataGrid.Items.Refresh();
