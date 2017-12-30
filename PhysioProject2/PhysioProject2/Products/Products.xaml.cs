@@ -42,6 +42,7 @@ namespace PhysioProject2
 
         public void BindGrid()
         {
+            
             OleDbCommand cmd = new OleDbCommand();
             if (con.State != ConnectionState.Open)
                 con.Open();

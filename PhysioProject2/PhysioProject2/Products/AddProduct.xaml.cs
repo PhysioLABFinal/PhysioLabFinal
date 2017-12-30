@@ -25,12 +25,10 @@ namespace PhysioProject2
     /// </summary>
     public partial class AddProduct : Window
     {
-        OleDbConnection con;
         public AddProduct()
         {
             InitializeComponent();
-            con = new OleDbConnection();
-            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+           
 
         }
 
@@ -43,41 +41,16 @@ namespace PhysioProject2
         private void productSaveButton_Click_1(object sender, RoutedEventArgs e)
         {
 
-            con.Open();
+            
 
-            // DbCommand also implements IDisposable
-            using (OleDbCommand cmd = con.CreateCommand())
-            {
-                // create command with placeholders
-                cmd.CommandText =
-                   "INSERT INTO Products " +
-                   "([Name], [Company],  [PricePerUnit]) " +
-                   "VALUES(@Name, @Company, @PricePerUnit)";
-
-                // add named parameters
-                String cmp = productCompanyTxt.Text;
-                String nm = productNameTxt.Text;
-                String ppr = productPriceTxt.Text;
-                cmd.Parameters.AddRange(new OleDbParameter[]
-                {
-
-               new OleDbParameter("@Name", nm),
-               new OleDbParameter("@Company", cmp),
-               new OleDbParameter("@PricePerUnit",ppr)
-               
-           });
-
-                // execute
-                cmd.ExecuteNonQuery();
-
-
-            }
-
-
-
-            this.Close();
 
 
         }
+
+
+
+
+
+    }
     }
 }
