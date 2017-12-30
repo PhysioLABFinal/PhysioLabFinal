@@ -125,6 +125,7 @@ namespace PhysioProject2
 		private void save_Click(object sender, RoutedEventArgs e)
 		{
 			OleDbCommand cmd = new OleDbCommand();
+
 			if (con.State != ConnectionState.Open)
 				con.Open();
 			cmd.Connection = con;
@@ -133,10 +134,13 @@ namespace PhysioProject2
 			{
 				if (clientIDTxt.Text == "")
 				{
-					cmd.CommandText = "insert into Clients(Name,Surname,Birthday,Telephone,Doctor,Diagnosis,Comments) Values('" + clientNameTxt.Text + "','" + clientSurnameTxt.Text + "','" + clientBirthdayTxt.Text + "','" + clientPhoneTxt.Text + "','" + clientDoctorTxt.Text + "','" + clientDiagnosisTxt.Text + "','" + clientCommentsTxt.Text + "')";
+
+                    cmd.CommandText = "insert into Clients(Name,Surname,Birthday,Telephone,Doctor,Diagnosis,Comments) Values('" + clientNameTxt.Text + "','" + clientSurnameTxt.Text + "','" + clientBirthdayTxt.Text + "','" + clientPhoneTxt.Text + "','" + clientDoctorTxt.Text + "','" + clientDiagnosisTxt.Text + "','" + clientCommentsTxt.Text + "')";
 					cmd.ExecuteNonQuery();
 					BindGrid();
-					MessageBox.Show("Ο νέος πελάτης προστέθηκε με επιτυχία!!");
+                   
+
+                    MessageBox.Show("Ο νέος πελάτης προστέθηκε με επιτυχία!!");
 
                     ClearAll();
 				}
@@ -161,6 +165,6 @@ namespace PhysioProject2
 			dv.RowFilter = string.Format("Surname LIKE '{0}*'", SearchTxt.Text);
 			ClientdataGrid.ItemsSource = dv;
 		}
-
+        
 	}
 }

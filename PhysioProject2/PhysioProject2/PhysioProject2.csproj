@@ -63,10 +63,20 @@
     <Compile Include="Clients\ClientInfo.xaml.cs">
       <DependentUpon>ClientInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataSet1.Designer.cs">
+    <Compile Include="PhysioDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DependentUpon>PhysioDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhysioDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhysioDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhysioDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhysioDatabaseDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Products\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
@@ -145,16 +155,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="PhysioDatabaseDataSet.xsc">
+      <DependentUpon>PhysioDatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
+    <None Include="PhysioDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>PhysioDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="PhysioDatabaseDataSet.xss">
+      <DependentUpon>PhysioDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PhysioDatabaseDataSet1.xsc">
+      <DependentUpon>PhysioDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PhysioDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhysioDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PhysioDatabaseDataSet1.xss">
+      <DependentUpon>PhysioDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PhysioDatabaseDataSet2.xsc">
+      <DependentUpon>PhysioDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PhysioDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhysioDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PhysioDatabaseDataSet2.xss">
+      <DependentUpon>PhysioDatabaseDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
