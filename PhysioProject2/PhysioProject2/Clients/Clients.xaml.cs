@@ -43,7 +43,6 @@ namespace PhysioProject2
 
 
 
-
         }
 
 		private void SearchTxt_GotFocus(object sender, RoutedEventArgs e)
@@ -138,7 +137,8 @@ namespace PhysioProject2
 					cmd.ExecuteNonQuery();
 					BindGrid();
 					MessageBox.Show("Ο νέος πελάτης προστέθηκε με επιτυχία!!");
-					ClearAll();
+
+                    ClearAll();
 				}
 				else
 				{

@@ -162,8 +162,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Products\background.jpg" />
     <Resource Include="appIcon.ico" />
+    <Resource Include="background.jpg" />
     <Content Include="PhysioDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
