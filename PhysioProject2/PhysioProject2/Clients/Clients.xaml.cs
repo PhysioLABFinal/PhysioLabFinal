@@ -40,7 +40,11 @@ namespace PhysioProject2
 			dt = new DataTable();
 			da.Fill(dt);
 			ClientdataGrid.ItemsSource = dt.AsDataView();
-		}
+
+
+
+
+        }
 
 		private void SearchTxt_GotFocus(object sender, RoutedEventArgs e)
         {

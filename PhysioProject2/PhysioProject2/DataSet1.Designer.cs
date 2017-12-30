@@ -20,17 +20,17 @@ namespace PhysioProject2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ProductsDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ProductsDataSet : global::System.Data.DataSet {
+    public partial class DataSet1 : global::System.Data.DataSet {
         
-        private ProductsDataTable tableProducts;
+        private ProductsAdDataTable tableProductsAd;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ProductsDataSet() {
+        public DataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PhysioProject2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected ProductsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PhysioProject2 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Products"] != null)) {
-                    base.Tables.Add(new ProductsDataTable(ds.Tables["Products"]));
+                if ((ds.Tables["ProductsAd"] != null)) {
+                    base.Tables.Add(new ProductsAdDataTable(ds.Tables["ProductsAd"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PhysioProject2 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ProductsDataTable Products {
+        public ProductsAdDataTable ProductsAd {
             get {
-                return this.tableProducts;
+                return this.tableProductsAd;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PhysioProject2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ProductsDataSet cln = ((ProductsDataSet)(base.Clone()));
+            DataSet1 cln = ((DataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PhysioProject2 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Products"] != null)) {
-                    base.Tables.Add(new ProductsDataTable(ds.Tables["Products"]));
+                if ((ds.Tables["ProductsAd"] != null)) {
+                    base.Tables.Add(new ProductsAdDataTable(ds.Tables["ProductsAd"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PhysioProject2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableProducts = ((ProductsDataTable)(base.Tables["Products"]));
+            this.tableProductsAd = ((ProductsAdDataTable)(base.Tables["ProductsAd"]));
             if ((initTable == true)) {
-                if ((this.tableProducts != null)) {
-                    this.tableProducts.InitVars();
+                if ((this.tableProductsAd != null)) {
+                    this.tableProductsAd.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PhysioProject2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ProductsDataSet";
+            this.DataSetName = "DataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ProductsDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableProducts = new ProductsDataTable();
-            base.Tables.Add(this.tableProducts);
+            this.tableProductsAd = new ProductsAdDataTable();
+            base.Tables.Add(this.tableProductsAd);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeProducts() {
+        private bool ShouldSerializeProductsAd() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PhysioProject2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ProductsDataSet ds = new ProductsDataSet();
+            DataSet1 ds = new DataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace PhysioProject2 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ProductsRowChangeEventHandler(object sender, ProductsRowChangeEvent e);
+        public delegate void ProductsAdRowChangeEventHandler(object sender, ProductsAdRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ProductsDataTable : global::System.Data.TypedTableBase<ProductsRow> {
+        public partial class ProductsAdDataTable : global::System.Data.TypedTableBase<ProductsAdRow> {
             
             private global::System.Data.DataColumn columnProID;
             
@@ -289,8 +289,8 @@ namespace PhysioProject2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsDataTable() {
-                this.TableName = "Products";
+            public ProductsAdDataTable() {
+                this.TableName = "ProductsAd";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace PhysioProject2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ProductsDataTable(global::System.Data.DataTable table) {
+            internal ProductsAdDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +315,7 @@ namespace PhysioProject2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ProductsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProductsAdDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -363,55 +363,55 @@ namespace PhysioProject2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsRow this[int index] {
+            public ProductsAdRow this[int index] {
                 get {
-                    return ((ProductsRow)(this.Rows[index]));
+                    return ((ProductsAdRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductsRowChangeEventHandler ProductsRowChanging;
+            public event ProductsAdRowChangeEventHandler ProductsAdRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductsRowChangeEventHandler ProductsRowChanged;
+            public event ProductsAdRowChangeEventHandler ProductsAdRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductsRowChangeEventHandler ProductsRowDeleting;
+            public event ProductsAdRowChangeEventHandler ProductsAdRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductsRowChangeEventHandler ProductsRowDeleted;
+            public event ProductsAdRowChangeEventHandler ProductsAdRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddProductsRow(ProductsRow row) {
+            public void AddProductsAdRow(ProductsAdRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsRow AddProductsRow(string Name, string Company, string PricePerUnit) {
-                ProductsRow rowProductsRow = ((ProductsRow)(this.NewRow()));
+            public ProductsAdRow AddProductsAdRow(string Name, string Company, string PricePerUnit) {
+                ProductsAdRow rowProductsAdRow = ((ProductsAdRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
                         Company,
                         PricePerUnit};
-                rowProductsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowProductsRow);
-                return rowProductsRow;
+                rowProductsAdRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProductsAdRow);
+                return rowProductsAdRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsRow FindByProID(int ProID) {
-                return ((ProductsRow)(this.Rows.Find(new object[] {
+            public ProductsAdRow FindByProID(int ProID) {
+                return ((ProductsAdRow)(this.Rows.Find(new object[] {
                             ProID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ProductsDataTable cln = ((ProductsDataTable)(base.Clone()));
+                ProductsAdDataTable cln = ((ProductsAdDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,7 +419,7 @@ namespace PhysioProject2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ProductsDataTable();
+                return new ProductsAdDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -456,28 +456,28 @@ namespace PhysioProject2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsRow NewProductsRow() {
-                return ((ProductsRow)(this.NewRow()));
+            public ProductsAdRow NewProductsAdRow() {
+                return ((ProductsAdRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ProductsRow(builder);
+                return new ProductsAdRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ProductsRow);
+                return typeof(ProductsAdRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ProductsRowChanged != null)) {
-                    this.ProductsRowChanged(this, new ProductsRowChangeEvent(((ProductsRow)(e.Row)), e.Action));
+                if ((this.ProductsAdRowChanged != null)) {
+                    this.ProductsAdRowChanged(this, new ProductsAdRowChangeEvent(((ProductsAdRow)(e.Row)), e.Action));
                 }
             }
             
@@ -485,8 +485,8 @@ namespace PhysioProject2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ProductsRowChanging != null)) {
-                    this.ProductsRowChanging(this, new ProductsRowChangeEvent(((ProductsRow)(e.Row)), e.Action));
+                if ((this.ProductsAdRowChanging != null)) {
+                    this.ProductsAdRowChanging(this, new ProductsAdRowChangeEvent(((ProductsAdRow)(e.Row)), e.Action));
                 }
             }
             
@@ -494,8 +494,8 @@ namespace PhysioProject2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ProductsRowDeleted != null)) {
-                    this.ProductsRowDeleted(this, new ProductsRowChangeEvent(((ProductsRow)(e.Row)), e.Action));
+                if ((this.ProductsAdRowDeleted != null)) {
+                    this.ProductsAdRowDeleted(this, new ProductsAdRowChangeEvent(((ProductsAdRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,14 +503,14 @@ namespace PhysioProject2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ProductsRowDeleting != null)) {
-                    this.ProductsRowDeleting(this, new ProductsRowChangeEvent(((ProductsRow)(e.Row)), e.Action));
+                if ((this.ProductsAdRowDeleting != null)) {
+                    this.ProductsAdRowDeleting(this, new ProductsAdRowChangeEvent(((ProductsAdRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveProductsRow(ProductsRow row) {
+            public void RemoveProductsAdRow(ProductsAdRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -519,7 +519,7 @@ namespace PhysioProject2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProductsDataSet ds = new ProductsDataSet();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -537,7 +537,7 @@ namespace PhysioProject2 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ProductsDataTable";
+                attribute2.FixedValue = "ProductsAdDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -581,25 +581,25 @@ namespace PhysioProject2 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ProductsRow : global::System.Data.DataRow {
+        public partial class ProductsAdRow : global::System.Data.DataRow {
             
-            private ProductsDataTable tableProducts;
+            private ProductsAdDataTable tableProductsAd;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ProductsRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProductsAdRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableProducts = ((ProductsDataTable)(this.Table));
+                this.tableProductsAd = ((ProductsAdDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ProID {
                 get {
-                    return ((int)(this[this.tableProducts.ProIDColumn]));
+                    return ((int)(this[this.tableProductsAd.ProIDColumn]));
                 }
                 set {
-                    this[this.tableProducts.ProIDColumn] = value;
+                    this[this.tableProductsAd.ProIDColumn] = value;
                 }
             }
             
@@ -608,14 +608,14 @@ namespace PhysioProject2 {
             public string Name {
                 get {
                     try {
-                        return ((string)(this[this.tableProducts.NameColumn]));
+                        return ((string)(this[this.tableProductsAd.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'Products\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'ProductsAd\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProducts.NameColumn] = value;
+                    this[this.tableProductsAd.NameColumn] = value;
                 }
             }
             
@@ -624,14 +624,14 @@ namespace PhysioProject2 {
             public string Company {
                 get {
                     try {
-                        return ((string)(this[this.tableProducts.CompanyColumn]));
+                        return ((string)(this[this.tableProductsAd.CompanyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Company\' in table \'Products\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Company\' in table \'ProductsAd\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProducts.CompanyColumn] = value;
+                    this[this.tableProductsAd.CompanyColumn] = value;
                 }
             }
             
@@ -640,51 +640,51 @@ namespace PhysioProject2 {
             public string PricePerUnit {
                 get {
                     try {
-                        return ((string)(this[this.tableProducts.PricePerUnitColumn]));
+                        return ((string)(this[this.tableProductsAd.PricePerUnitColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerUnit\' in table \'Products\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerUnit\' in table \'ProductsAd\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProducts.PricePerUnitColumn] = value;
+                    this[this.tableProductsAd.PricePerUnitColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNameNull() {
-                return this.IsNull(this.tableProducts.NameColumn);
+                return this.IsNull(this.tableProductsAd.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNameNull() {
-                this[this.tableProducts.NameColumn] = global::System.Convert.DBNull;
+                this[this.tableProductsAd.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCompanyNull() {
-                return this.IsNull(this.tableProducts.CompanyColumn);
+                return this.IsNull(this.tableProductsAd.CompanyColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCompanyNull() {
-                this[this.tableProducts.CompanyColumn] = global::System.Convert.DBNull;
+                this[this.tableProductsAd.CompanyColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPricePerUnitNull() {
-                return this.IsNull(this.tableProducts.PricePerUnitColumn);
+                return this.IsNull(this.tableProductsAd.PricePerUnitColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPricePerUnitNull() {
-                this[this.tableProducts.PricePerUnitColumn] = global::System.Convert.DBNull;
+                this[this.tableProductsAd.PricePerUnitColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +692,22 @@ namespace PhysioProject2 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ProductsRowChangeEvent : global::System.EventArgs {
+        public class ProductsAdRowChangeEvent : global::System.EventArgs {
             
-            private ProductsRow eventRow;
+            private ProductsAdRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsRowChangeEvent(ProductsRow row, global::System.Data.DataRowAction action) {
+            public ProductsAdRowChangeEvent(ProductsAdRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductsRow Row {
+            public ProductsAdRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -723,7 +723,7 @@ namespace PhysioProject2 {
         }
     }
 }
-namespace PhysioProject2.ProductsDataSetTableAdapters {
+namespace PhysioProject2.DataSet1TableAdapters {
     
     
     /// <summary>
@@ -735,7 +735,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ProductsTableAdapter : global::System.ComponentModel.Component {
+    public partial class ProductsAdTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -749,7 +749,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ProductsTableAdapter() {
+        public ProductsAdTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -846,7 +846,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Products";
+            tableMapping.DataSetTable = "ProductsAd";
             tableMapping.ColumnMappings.Add("ProID", "ProID");
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("Company", "Company");
@@ -854,7 +854,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `PRODUCTS` WHERE ((`ProID` = ?) AND ((? = 1 AND `Name` IS NULL) OR (`" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Products` WHERE ((`ProID` = ?) AND ((? = 1 AND `Name` IS NULL) OR (`" +
                 "Name` = ?)) AND ((? = 1 AND `Company` IS NULL) OR (`Company` = ?)) AND ((? = 1 A" +
                 "ND `PricePerUnit` IS NULL) OR (`PricePerUnit` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
@@ -867,14 +867,14 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PricePerUnit", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PricePerUnit", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `PRODUCTS` (`Name`, `Company`, `PricePerUnit`) VALUES (?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Products` (`Name`, `Company`, `PricePerUnit`) VALUES (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Company", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Company", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PricePerUnit", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PricePerUnit", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `PRODUCTS` SET `Name` = ?, `Company` = ?, `PricePerUnit` = ? WHERE ((`ProID` = ?) AND ((? = 1 AND `Name` IS NULL) OR (`Name` = ?)) AND ((? = 1 AND `Company` IS NULL) OR (`Company` = ?)) AND ((? = 1 AND `PricePerUnit` IS NULL) OR (`PricePerUnit` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Products` SET `Name` = ?, `Company` = ?, `PricePerUnit` = ? WHERE ((`ProID` = ?) AND ((? = 1 AND `Name` IS NULL) OR (`Name` = ?)) AND ((? = 1 AND `Company` IS NULL) OR (`Company` = ?)) AND ((? = 1 AND `PricePerUnit` IS NULL) OR (`PricePerUnit` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Company", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Company", global::System.Data.DataRowVersion.Current, false, null));
@@ -901,7 +901,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM PRODUCTS";
+            this._commandCollection[0].CommandText = "SELECT ProID, Name, Company, PricePerUnit FROM Products";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -909,7 +909,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProductsDataSet.ProductsDataTable dataTable) {
+        public virtual int Fill(DataSet1.ProductsAdDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -922,9 +922,9 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProductsDataSet.ProductsDataTable GetData() {
+        public virtual DataSet1.ProductsAdDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProductsDataSet.ProductsDataTable dataTable = new ProductsDataSet.ProductsDataTable();
+            DataSet1.ProductsAdDataTable dataTable = new DataSet1.ProductsAdDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -932,15 +932,15 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProductsDataSet.ProductsDataTable dataTable) {
+        public virtual int Update(DataSet1.ProductsAdDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProductsDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Products");
+        public virtual int Update(DataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "ProductsAd");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1120,7 +1120,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private ProductsTableAdapter _productsTableAdapter;
+        private ProductsAdTableAdapter _productsAdTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1142,12 +1142,12 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ProductsTableAdapter ProductsTableAdapter {
+        public ProductsAdTableAdapter ProductsAdTableAdapter {
             get {
-                return this._productsTableAdapter;
+                return this._productsAdTableAdapter;
             }
             set {
-                this._productsTableAdapter = value;
+                this._productsAdTableAdapter = value;
             }
         }
         
@@ -1170,9 +1170,9 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._productsTableAdapter != null) 
-                            && (this._productsTableAdapter.Connection != null))) {
-                    return this._productsTableAdapter.Connection;
+                if (((this._productsAdTableAdapter != null) 
+                            && (this._productsAdTableAdapter.Connection != null))) {
+                    return this._productsAdTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1187,7 +1187,7 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._productsTableAdapter != null)) {
+                if ((this._productsAdTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1199,14 +1199,14 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(ProductsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._productsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Products.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._productsAdTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ProductsAd.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._productsTableAdapter.Update(updatedRows));
+                    result = (result + this._productsAdTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1218,13 +1218,13 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(ProductsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._productsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Products.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._productsAdTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ProductsAd.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._productsTableAdapter.Update(addedRows));
+                    result = (result + this._productsAdTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1236,13 +1236,13 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(ProductsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._productsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Products.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._productsAdTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ProductsAd.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._productsTableAdapter.Update(deletedRows));
+                    result = (result + this._productsAdTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1278,15 +1278,15 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(ProductsDataSet dataSet) {
+        public virtual int UpdateAll(DataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._productsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._productsTableAdapter.Connection) == false))) {
+            if (((this._productsAdTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._productsAdTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1322,13 +1322,13 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._productsTableAdapter != null)) {
-                    revertConnections.Add(this._productsTableAdapter, this._productsTableAdapter.Connection);
-                    this._productsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._productsTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._productsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._productsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._productsTableAdapter.Adapter);
+                if ((this._productsAdTableAdapter != null)) {
+                    revertConnections.Add(this._productsAdTableAdapter, this._productsAdTableAdapter.Connection);
+                    this._productsAdTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._productsAdTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._productsAdTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._productsAdTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._productsAdTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1389,9 +1389,9 @@ namespace PhysioProject2.ProductsDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._productsTableAdapter != null)) {
-                    this._productsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._productsTableAdapter]));
-                    this._productsTableAdapter.Transaction = null;
+                if ((this._productsAdTableAdapter != null)) {
+                    this._productsAdTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._productsAdTableAdapter]));
+                    this._productsAdTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

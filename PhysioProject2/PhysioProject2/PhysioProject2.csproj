@@ -63,6 +63,11 @@
     <Compile Include="Clients\ClientInfo.xaml.cs">
       <DependentUpon>ClientInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Products\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
@@ -71,6 +76,11 @@
     </Compile>
     <Compile Include="Payments\Payments.xaml.cs">
       <DependentUpon>Payments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Page Include="Clients\Window1.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -120,11 +130,6 @@
     <Compile Include="Products\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Products\ProductsDataset.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductsDataset.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,25 +138,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Products\ProductsDataset.xsc">
-      <DependentUpon>ProductsDataset.xsd</DependentUpon>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Products\ProductsDataset.xsd">
+    <None Include="DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductsDataset.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Products\ProductsDataset.xss">
-      <DependentUpon>ProductsDataset.xsd</DependentUpon>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,10 +162,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="background.jpg" />
+    <Resource Include="Products\background.jpg" />
     <Resource Include="appIcon.ico" />
     <Content Include="PhysioDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
