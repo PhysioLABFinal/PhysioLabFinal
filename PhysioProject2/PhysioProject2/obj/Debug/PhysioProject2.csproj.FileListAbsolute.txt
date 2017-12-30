@@ -138,3 +138,12 @@ C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.exe
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.pdb
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.csprojResolveAssemblyReference.cache
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\WPFToolkit.dll
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Metro.MSControls.Core.Implicit.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Metro.MSControls.Toolkit.Implicit.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Styles.Shared.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Styles.WPF.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Theme.Colors.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\App.baml
