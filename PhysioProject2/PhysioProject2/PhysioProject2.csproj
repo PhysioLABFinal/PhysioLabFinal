@@ -63,21 +63,6 @@
     <Compile Include="Clients\ClientInfo.xaml.cs">
       <DependentUpon>ClientInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PhysioDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PhysioDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PhysioDatabaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PhysioDatabaseDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PhysioDatabaseDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PhysioDatabaseDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Products\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
@@ -155,39 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="PhysioDatabaseDataSet.xsc">
-      <DependentUpon>PhysioDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PhysioDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PhysioDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PhysioDatabaseDataSet.xss">
-      <DependentUpon>PhysioDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PhysioDatabaseDataSet1.xsc">
-      <DependentUpon>PhysioDatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PhysioDatabaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PhysioDatabaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PhysioDatabaseDataSet1.xss">
-      <DependentUpon>PhysioDatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PhysioDatabaseDataSet2.xsc">
-      <DependentUpon>PhysioDatabaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="PhysioDatabaseDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PhysioDatabaseDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PhysioDatabaseDataSet2.xss">
-      <DependentUpon>PhysioDatabaseDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -197,7 +149,7 @@
     <Resource Include="appIcon.ico" />
     <Resource Include="background.jpg" />
     <Content Include="PhysioDatabase.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
