@@ -120,10 +120,10 @@
     <Compile Include="Products\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Products\ProductsDataSet.Designer.cs">
+    <Compile Include="Products\ProductsDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProductsDataSet.xsd</DependentUpon>
+      <DependentUpon>ProductsDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -142,16 +142,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Products\ProductsDataSet.xsc">
-      <DependentUpon>ProductsDataSet.xsd</DependentUpon>
+    <None Include="Products\ProductsDataset.xsc">
+      <DependentUpon>ProductsDataset.xsd</DependentUpon>
     </None>
-    <None Include="Products\ProductsDataSet.xsd">
+    <None Include="Products\ProductsDataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductsDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProductsDataset.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Products\ProductsDataSet.xss">
-      <DependentUpon>ProductsDataSet.xsd</DependentUpon>
+    <None Include="Products\ProductsDataset.xss">
+      <DependentUpon>ProductsDataset.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
