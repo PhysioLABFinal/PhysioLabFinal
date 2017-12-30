@@ -43,7 +43,6 @@ namespace PhysioProject2
 
 
             
-            OleDbDataAdapter dp = new OleDbDataAdapter();
             
             
 
