@@ -9,11 +9,7 @@
       Title="Remindme">
 
     <Grid>
-        <StackPanel>
-            <TextBlock></TextBlock>
-            
-            
-            
-        </StackPanel>
+        <Button x:Name="BtnSend" Width="200" Height="200" Background="Yellow" Content="Send" Click="BtnSend_Click"/>
+
     </Grid>
 </Page>

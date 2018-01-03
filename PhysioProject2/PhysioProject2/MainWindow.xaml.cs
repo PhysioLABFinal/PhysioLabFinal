@@ -57,8 +57,8 @@ namespace PhysioProject2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
+            Main.Content = new Reminder.Remindme();
+            
 
 
         }

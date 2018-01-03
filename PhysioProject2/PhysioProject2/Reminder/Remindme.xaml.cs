@@ -25,34 +25,64 @@ namespace PhysioProject2.Reminder
         public Remindme()
         {
             InitializeComponent();
-            string srv = "dealmaister.com";
-            CreateTimeoutTestMessage(srv);
+            
         }
 
 
 
-        public static void CreateTimeoutTestMessage(string server)
+        private void BtnSend_Click(object sender, RoutedEventArgs e)
         {
-            string to = "dimitros96@gmail.com";
-            string from = "info@dealmaister.com";
-            string subject = "Testing our application";
-            string body = @"Using this new feature, you can send an e-mail message from an application very easily.";
-            MailMessage message = new MailMessage(from, to, subject, body);
-            SmtpClient client = new SmtpClient(server);
-            Console.WriteLine("Changing time out from {0} to 100.", client.Timeout);
-            client.Timeout = 100;
-            // Credentials are necessary if the server requires the client 
-            // to authenticate before it will send e-mail on the client's behalf.
-            client.Credentials = CredentialCache.DefaultNetworkCredentials;
-
             try
             {
-                client.Send(message);
+
+                MailMessage mail = new MailMessage();
+                //put your SMTP address and port here.
+                SmtpClient SmtpServer = new SmtpClient("");
+                //Put the email address
+                mail.From = new MailAddress("");
+                //Put the email where you want to send.
+                mail.To.Add("");
+
+
+                mail.Subject = "CheckoutPOS Exception Log";
+
+                StringBuilder sbBody = new StringBuilder();
+
+                sbBody.AppendLine("Hi Dev Team,");
+
+                sbBody.AppendLine("Something went wrong with CheckoutPOS");
+
+                sbBody.AppendLine("Here is the error log:");
+
+                sbBody.AppendLine("Exception: Object reference not set to an instance of an object....");
+
+                sbBody.AppendLine("Thanks,");
+
+                mail.Body = sbBody.ToString();
+
+                MessageBox.Show("Test2");
+
+                //Your log file path
+                System.Net.Mail.Attachment attachment = new System.Net.Mail.Attachment(@".\\PhysioDatabase.accdb");
+
+                mail.Attachments.Add(attachment);
+                MessageBox.Show("Test1");
+
+
+                //Your username and password!
+                SmtpServer.Credentials = new System.Net.NetworkCredential("", "");
+                //Set Smtp Server port
+                MessageBox.Show("connected");
+
+                SmtpServer.Port = 25;
+                //SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+                MessageBox.Show("The exception has been sent! :)");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception caught in CreateTimeoutTestMessage(): {0}",
-                      ex.ToString());
+                Console.WriteLine(ex.ToString());
             }
         }
     }
