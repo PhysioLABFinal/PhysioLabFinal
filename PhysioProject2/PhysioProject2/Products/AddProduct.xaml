@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Προσθήκη Προϊόντος " Height="303.191" Width="348.936">
     <Grid>
+  
         <Grid HorizontalAlignment="Left" Margin="48,20,0,0" VerticalAlignment="Top" Height="0" Width="0"/>
         <Label x:Name="productNameLbl" Content="Όνομα" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="35" Width="153" FontSize="14"/>
         <TextBox x:Name="productNameTxt" HorizontalAlignment="Left" Height="23" Margin="185,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>

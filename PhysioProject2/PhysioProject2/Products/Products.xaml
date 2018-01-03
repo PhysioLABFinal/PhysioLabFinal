@@ -8,14 +8,14 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Products" Height="auto" Width="auto">
 
-    <Grid>
+    <Grid >
         <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top"/>
         <TextBox Name="SearchProductsTB" HorizontalAlignment="Left" Height="18" Margin="118,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
         <Label Content="ΠΡΟΙΟΝΤΑ&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="108"/>
         <StackPanel HorizontalAlignment="Left" Height="174" Margin="25,91,0,0" VerticalAlignment="Top" Width="246">
-            <DataGrid x:Name="ProductsDataGrid" Height="173" HorizontalAlignment="Left" Width="246"/>
+            <DataGrid  x:Name="ProductsDataGrid"  Height="auto"  Width="auto"/>
         </StackPanel>
-        <Button Content="Προσθήκη" HorizontalAlignment="Left" Margin="182,13,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Προσθήκη" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="101" Click="Button_Click" Margin="156,6,0,0"/>
 
     </Grid>
 </Page>

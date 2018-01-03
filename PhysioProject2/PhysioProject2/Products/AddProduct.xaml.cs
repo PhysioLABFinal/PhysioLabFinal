@@ -25,33 +25,46 @@ namespace PhysioProject2
     /// </summary>
     public partial class AddProduct : Window
     {
+
+        OleDbConnection con;
         public AddProduct()
         {
             InitializeComponent();
-           
+            con = new OleDbConnection();
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+
+
+
 
         }
 
         private void productSaveButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            
+
+
+
+
+
         }
 
         private void productSaveButton_Click_1(object sender, RoutedEventArgs e)
         {
 
+            OleDbCommand cmd = new OleDbCommand();
 
-            
-            
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            cmd.Connection = con;
+
+
+            cmd.CommandText = "insert into Products(Name,Company,PricePerUnit) Values('" + productNameTxt.Text + "','" + productCompanyTxt.Text + "','" + productPriceTxt.Text + "')";
+            cmd.ExecuteNonQuery();
+            Products x = new Products();
+            x.ProductsDataGrid.Items.Refresh();
+            this.Close();
             
 
         }
-
-
-
-
-
     }
     }
 
