@@ -1,0 +1,22 @@
+﻿<Window x:Class="PhysioProject2.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhysioProject2"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="300">
+    <Grid>
+        <Label  Content="Όνομα" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="32" Width="59" RenderTransformOrigin="0.397,0.569" Background="#00000000" Foreground="White"/>
+        <Label Content="Κωδικός" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="UsernameTB" HorizontalAlignment="Left" Height="23" Margin="92,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PasswordTB" HorizontalAlignment="Left" Height="23" Margin="92,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Developed on ATEITH 2017,All rights Reserved" HorizontalAlignment="Left" Margin="104,254,-48,-21" VerticalAlignment="Top" Width="236" Height="36" FontSize="9" Foreground="White"/>
+        <Button Content="Είσοδος" HorizontalAlignment="Left" Margin="92,157,0,0" VerticalAlignment="Top" Width="75" Foreground="Black" Background="#FF20B1D1" BorderBrush="#FF11B2B9" Click="Button_Click"/>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+    </Grid>
+</Window>

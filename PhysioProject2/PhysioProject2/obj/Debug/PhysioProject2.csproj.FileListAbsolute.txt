@@ -165,3 +165,5 @@ C:\Users\jim\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\D
 C:\Users\jim\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2_Content.g.cs
 C:\Users\jim\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2_MarkupCompile.cache
 C:\Users\jim\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2_MarkupCompile.lref
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Login.g.cs
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Login.baml
