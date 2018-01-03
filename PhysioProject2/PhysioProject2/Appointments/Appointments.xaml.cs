@@ -119,6 +119,8 @@ namespace PhysioProject2
                     BindGrid();
                     MessageBox.Show("Ο πελάτης προστέθηκε με επιτυχία!!");
                     ClearAll();
+                    Add.IsEnabled = false;
+
             }
             else
             {
