@@ -15,7 +15,7 @@
         <Button Content="Είσοδος" HorizontalAlignment="Left" Margin="92,157,0,0" VerticalAlignment="Top" Width="75" Foreground="Black" Background="#FF20B1D1" BorderBrush="#FF11B2B9" Click="Button_Click"/>
 
         <Grid.Background>
-            <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="background.jpg" TileMode="FlipXY" Stretch="UniformToFill"/>
         </Grid.Background>
 
     </Grid>
