@@ -28,7 +28,8 @@ namespace PhysioProject2
 
         OleDbConnection con;
         DataTable dt;
-
+        OleDbDataReader odd;
+        
 
         public Appointments()
         {
@@ -49,7 +50,7 @@ namespace PhysioProject2
                 con.Open();
             //Clients.Cname, Appointments.AppDate, Appointments.TreatmentOrTherapy, Appointments.AppPrice
             cmd.Connection = con;
-            cmd.CommandText = "SELECT Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID)";
+            cmd.CommandText = "SELECT Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID)";
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
@@ -80,16 +81,19 @@ namespace PhysioProject2
 
         private void ClearAll()
         {
-            ApDate.Text = "";
-            ApCost.Text = "";
+            ApID.Text = "";
             ApName.Text = "";
+            ApLast.Text = "";
+            ApTreatment.Text = "";
             ApStart.Text = "";
             ApEnd.Text = "";
-            ApTreatment.Text = "";
+            ApDate.Text = "";
+            ApCost.Text = "";
+
 
         }
 
-       
+
         private void ApSearch_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             DataView dv = new DataView(dt);
@@ -105,23 +109,26 @@ namespace PhysioProject2
                 con.Open();
             cmd.Connection = con;
 
-            if (ApName.Text != "")
-            {
+          
+            if (ApTreatment.Text!="" && ApStart.Text != "" && ApEnd.Text != "" && ApDate.Text != "" && ApCost.Text != "")
+            
 
-                {
+            { 
                     cmd.CommandText = "insert into Appointments(AppDate,TreatmentOrTherapy,AppTime,AppEndTime,AppPrice) Values('" + ApDate.Text + "','" + ApTreatment.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "')";
                     cmd.ExecuteNonQuery();
                     BindGrid();
-                    MessageBox.Show("Ο νέος πελάτης προστέθηκε με επιτυχία!!");
+                    MessageBox.Show("Ο πελάτης προστέθηκε με επιτυχία!!");
                     ClearAll();
-                }
-
-
             }
             else
             {
-                MessageBox.Show("Παρακαλώ προσθέστε όνομα πελάτη.......");
+                
+                MessageBox.Show("Δεν συμπληρώσατε όλα τα παραπάνω στοιχεία");
+
             }
+
+        
+
         }
 
         private void ApEdit_Click(object sender, RoutedEventArgs e)
@@ -170,6 +177,38 @@ namespace PhysioProject2
             DataView dv = new DataView(dt);
             dv.RowFilter = string.Format("Surname LIKE '{0}*'", ApName.Text);
             DataGrid1.ItemsSource = dv;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            string selectQuery = "SELECT * FROM Clients WHERE CID=" + (ApID.Text);
+            
+            cmd.Connection = con;
+            cmd = new OleDbCommand(selectQuery, con);
+            odd = cmd.ExecuteReader();
+
+            if (odd.Read())
+            {
+                ApName.Text = odd["Name"].ToString();
+                ApLast.Text = odd["Surname"].ToString();
+                Add.IsEnabled = true;
+            }
+            else
+            {
+                ApID.Text = "";
+                ApName.Text = "";
+                ApLast.Text = "";
+                ApTreatment.Text = "";
+                ApStart.Text = "";
+                ApEnd.Text = "";
+                ApDate.Text = "";
+                ApCost.Text = "";
+
+                MessageBox.Show("Δεν Υπάρχει Εγγραφή με αυτό το ID");
+
+            }
+
         }
     }
 }
