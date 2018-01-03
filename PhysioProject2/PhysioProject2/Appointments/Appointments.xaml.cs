@@ -114,7 +114,7 @@ namespace PhysioProject2
             
 
             { 
-                    cmd.CommandText = "insert into Appointments(AppDate,TreatmentOrTherapy,AppTime,AppEndTime,AppPrice) Values('" + ApDate.Text + "','" + ApTreatment.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "')";
+                    cmd.CommandText = "insert into Appointments(CID,AppDate,TreatmentOrTherapy,AppTime,AppEndTime,AppPrice) Values('" + ApID.Text + "','" + ApDate.Text + "','" + ApTreatment.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "')";
                     cmd.ExecuteNonQuery();
                     BindGrid();
                     MessageBox.Show("Ο πελάτης προστέθηκε με επιτυχία!!");
