@@ -9,7 +9,26 @@
       Title="Appointments">
 
     <Grid>
-        <TextBlock Foreground="#FFFF1111" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">Welcome to the Appointents page</TextBlock>
+        <Label Content="ΠΕΛΑΤΕΣ" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="19,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Όνομα" HorizontalAlignment="Left" Margin="13,57,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ημ/νία" HorizontalAlignment="Left" Margin="17,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Θεραπεία" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Έναρξη" HorizontalAlignment="Left" Margin="14,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="Λήξη" HorizontalAlignment="Left" Margin="24,193,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ApName" HorizontalAlignment="Left" Height="29" Margin="98,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="ApName_TextChanged"/>
+        <TextBox x:Name="ApDate" HorizontalAlignment="Left" Height="23" Margin="98,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ApTreatment" HorizontalAlignment="Left" Height="23" Margin="98,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ApStart" HorizontalAlignment="Left" Height="23" Margin="98,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ApEnd" HorizontalAlignment="Left" Height="21" Margin="98,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="197" Margin="251,57,-523,0" VerticalAlignment="Top" Width="572"/>
+        <Label Content="Κόστος" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ApCost" HorizontalAlignment="Left" Height="23" Margin="98,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="362,14,-139,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ApSearch" HorizontalAlignment="Left" Height="23" Margin="472,14,-292,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="ApSearch_TextChanged_1"/>
+        <Button x:Name="Add" Content="Προσθήκη" HorizontalAlignment="Left" Margin="108,270,0,0" VerticalAlignment="Top" Width="96" Click="Add_Click_1"/>
+        <Button x:Name="ApEdit" Content="Επεξεργασία" HorizontalAlignment="Left" Margin="251,270,-53,0" VerticalAlignment="Top" Width="102" Click="ApEdit_Click"/>
+        <Button x:Name="Completed" Content="Ολοκληρώθηκε" HorizontalAlignment="Left" Margin="701,270,-523,0" VerticalAlignment="Top" Width="122" Click="Completed_Click"/>
 
     </Grid>
 </Page>
