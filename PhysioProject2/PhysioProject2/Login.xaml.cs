@@ -35,10 +35,10 @@ namespace PhysioProject2
             {
                 con.Open();
                 cmd.Parameters.AddWithValue("@p1", UsernameTB.Text);
-                cmd.Parameters.AddWithValue("@p2", PasswordTB.Text);  // <- is this a variable or a textbox?
+                cmd.Parameters.AddWithValue("@p2", PasswordTB.Password.ToString());  // <- is this a variable or a textbox?
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0) { 
-                    MessageBox.Show("Επιτυχής Σύνδεση, Καλώς Ορισάτε");
+                    MessageBox.Show("Επιτυχής Σύνδεση, Καλώς Ορίσατε");
                     MainWindow obj = new MainWindow();
                     obj.Show();
                     this.Close();
@@ -47,5 +47,11 @@ namespace PhysioProject2
                     MessageBox.Show("Λάθος Όνομα Χρήστη/Κωδικός");
             }
         }
-    }
+
+		private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			addUser addUser = new addUser();
+			addUser.ShowDialog();
+		}
+	}
 }
