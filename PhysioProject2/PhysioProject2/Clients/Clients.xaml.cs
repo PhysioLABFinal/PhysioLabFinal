@@ -67,6 +67,8 @@ namespace PhysioProject2
 			clientDiagnosisTxt.Text = "";
 			clientCommentsTxt.Text = "";
 			MoreInfo.Visibility = Visibility.Hidden;
+			clientsAppData.Visibility = Visibility.Hidden;
+			appointmentsLbl.Visibility = Visibility.Hidden;
 		}
 
 		private void editClient_Click(object sender, RoutedEventArgs e)
