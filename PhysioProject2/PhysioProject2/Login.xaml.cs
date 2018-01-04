@@ -51,6 +51,7 @@ namespace PhysioProject2
 		private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
 			addUser addUser = new addUser();
+			addUser.ShowDialog();
 		}
 	}
 }

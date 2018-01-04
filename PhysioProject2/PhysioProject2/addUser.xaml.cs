@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.OleDb;
 
 namespace PhysioProject2
 {
@@ -22,6 +23,36 @@ namespace PhysioProject2
         public addUser()
         {
             InitializeComponent();
-        }
-    }
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			string constring = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+			string cmdText = "insert into Users(Username,Password) Values('" + newUsernameTB.Text + "','" + newPasswordTB.Password.ToString() + "')";
+			using (OleDbConnection con = new OleDbConnection(constring))
+			using (OleDbCommand cmd = new OleDbCommand(cmdText, con))
+			{
+				try
+				{ 				
+					con.Open();
+				
+					if (newPasswordTB.Password.ToString() == PasswordAgainTB.Password.ToString())
+					{
+						cmd.ExecuteNonQuery();
+						MessageBox.Show("Επιτυχής προσθήκη χρήστη");
+						this.Close();
+					}
+					else
+					{
+						MessageBox.Show("Η επαλήθευση κωδικού δεν έγινε με επιτυχία");
+					}
+				}
+				catch
+				{
+					MessageBox.Show("Σφάλμα");
+				}
+			}
+		}
+	}
+	
 }
