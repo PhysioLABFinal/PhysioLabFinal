@@ -234,3 +234,5 @@ C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\
 C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Reminder\Remindme.baml
 C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\addUser.g.cs
 C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\addUser.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\addUser.g.cs
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\addUser.baml

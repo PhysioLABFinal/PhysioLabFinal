@@ -28,17 +28,17 @@ namespace PhysioProject2
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			string constring = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
-			string cmdText = "insert into Users(Username,Password) Values('" + newUsernameTB.Text + "','" + newPasswordTB.Password.ToString() + "')";
+			string cmdText = "INSERT INTO Users(Username,Password) VALUES('" + newUsernameTB.Text +"','" + newPasswordTB.Password.ToString() + "')";
 			using (OleDbConnection con = new OleDbConnection(constring))
 			using (OleDbCommand cmd = new OleDbCommand(cmdText, con))
 			{
 				try
 				{ 				
 					con.Open();
-				
 					if (newPasswordTB.Password.ToString() == PasswordAgainTB.Password.ToString())
 					{
-						cmd.ExecuteNonQuery();
+
+                        cmd.ExecuteNonQuery();
 						MessageBox.Show("Επιτυχής προσθήκη χρήστη");
 						this.Close();
 					}
