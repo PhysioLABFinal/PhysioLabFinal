@@ -82,6 +82,7 @@ namespace PhysioProject2
 
         private void ClearAll()
         {
+            AppID.Text = "";
             ApID.Text = "";
             ApName.Text = "";
             ApLast.Text = "";
@@ -129,12 +130,7 @@ namespace PhysioProject2
                 MessageBox.Show("Δεν συμπληρώσατε όλα τα παραπάνω στοιχεία");
 
             }
-            ApTreatment.IsEnabled = false;
-            ApStart.IsEnabled = false;
-            ApEnd.IsEnabled = false;
-            ApCost.IsEnabled = false;
-            ApDate.IsEnabled = false ;
-
+            
             ApID.IsEnabled = true;
 
         }
@@ -145,14 +141,16 @@ namespace PhysioProject2
             
             if (DataGrid1.SelectedItems.Count > 0)
             {
+                AppEditOK.IsEnabled = true;
                 ApTreatment.IsEnabled = true;
                 ApStart.IsEnabled = true;
                 ApEnd.IsEnabled = true;
                 ApCost.IsEnabled = true;
                 ApDate.IsEnabled = true;
                 ApID.IsEnabled = false;
-                Add.IsEnabled = true;
+               
                 DataRowView row = (DataRowView)DataGrid1.SelectedItems[0];
+                AppID.Text = row["AID"].ToString();
                 ApID.Text = row["CID"].ToString();
                 ApLast.Text = row["Surname"].ToString();
                 ApName.Text = row["Name"].ToString();
@@ -202,7 +200,7 @@ namespace PhysioProject2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OleDbCommand cmd = new OleDbCommand();
-            string selectQuery = "SELECT * FROM Clients WHERE CID=" + (ApID.Text);
+            string selectQuery = "SELECT * FROM Clients INNER JOIN Appointments WHERE Clients.CID=" + (ApID.Text);
             if (ApID.Text != "") { 
             cmd.Connection = con;
             cmd = new OleDbCommand(selectQuery, con);
@@ -210,6 +208,7 @@ namespace PhysioProject2
            
             if (odd.Read())
             {
+                AppID.Text = odd["AID"].ToString();
                 ApName.Text = odd["Name"].ToString();
                 ApLast.Text = odd["Surname"].ToString();
                 ApTreatment.IsEnabled = true;
@@ -246,6 +245,82 @@ namespace PhysioProject2
 
             }
 
+        }
+
+        private void ApSearchID_Click(object sender, RoutedEventArgs e)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            string selectQuery = "SELECT * FROM Clients LEFT JOIN Appointments on Clients.CID = Appointments.CID WHERE Clients.CID=" + ApID.Text;
+            if (ApID.Text != "")
+            {
+                cmd.Connection = con;
+                cmd = new OleDbCommand(selectQuery, con);
+                odd = cmd.ExecuteReader();
+
+                if (odd.Read())
+                {
+                    AppID.Text = odd["AID"].ToString();
+                    ApName.Text = odd["Name"].ToString();
+                    ApLast.Text = odd["Surname"].ToString();
+                    ApTreatment.IsEnabled = true;
+                    ApStart.IsEnabled = true;
+                    ApEnd.IsEnabled = true;
+                    ApCost.IsEnabled = true;
+                    ApDate.IsEnabled = true;
+
+
+
+                    Add.IsEnabled = true;
+                }
+                else
+                {
+                    AppID.Text="";
+                    ApID.Text = "";
+                    ApName.Text = "";
+                    ApLast.Text = "";
+                    ApTreatment.Text = "";
+                    ApStart.Text = "";
+                    ApEnd.Text = "";
+                    ApDate.Text = "";
+                    ApCost.Text = "";
+
+                    MessageBox.Show("Δεν Υπάρχει Εγγραφή με αυτό το ID");
+
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Τοποθέτησε το ID του πελάτη για να προχωρήσεις");
+
+
+            }
+        }
+
+        private void AppEditOK_Click(object sender, RoutedEventArgs e)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            cmd.Connection = con;
+
+            if (ApName!=null)
+
+
+            {
+
+                cmd.CommandText = "update Appointments set AppDate='" + ApDate.Text + "',AppTime='" + ApStart.Text + "',AppEndTime='" + ApEnd.Text + "',AppPrice='" + ApCost.Text + "',ApTreatmentOrTherapy='" + ApTreatment.Text +"' where AID=" + AppID.Text;
+                cmd.ExecuteNonQuery();
+                BindGrid();
+                MessageBox.Show("Οι αλλαγές έγιναν με επιτυχία!!");
+                ClearAll();
+            }
+            else
+            {
+                MessageBox.Show("Δεν συμπλήρώσατε τα παραπάνω στοιχεία");
+            }
+          
         }
     }
 }

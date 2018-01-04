@@ -11,29 +11,32 @@
     <Grid>
         <Label Content="ΠΕΛΑΤΕΣ" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Label Content="" HorizontalAlignment="Left" Margin="19,91,0,0" VerticalAlignment="Top"/>
-        <Label Content="Όνομα" HorizontalAlignment="Left" Margin="17,128,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ημ/νία" HorizontalAlignment="Left" Margin="17,163,0,0" VerticalAlignment="Top"/>
-        <Label Content="Θεραπεία" HorizontalAlignment="Left" Margin="0,198,0,0" VerticalAlignment="Top"/>
-        <Label Content="Έναρξη" HorizontalAlignment="Left" Margin="14,233,0,0" VerticalAlignment="Top"/>
-        <Label Content="Λήξη" HorizontalAlignment="Left" Margin="28,268,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.613,1.025"/>
-        <TextBox x:Name="ApName" HorizontalAlignment="Left" Height="29" Margin="98,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="ApName_TextChanged" IsEnabled="False"/>
-        <TextBox x:Name="ApDate" HorizontalAlignment="Left" Height="23" Margin="98,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <TextBox x:Name="ApTreatment" HorizontalAlignment="Left" Height="23" Margin="98,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <TextBox x:Name="ApStart" HorizontalAlignment="Left" Height="23" Margin="98,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <TextBox x:Name="ApEnd" HorizontalAlignment="Left" Height="21" Margin="98,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.841" IsEnabled="False"/>
-        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="274" Margin="251,57,-571,-31" VerticalAlignment="Top" Width="620"/>
-        <Label Content="Κόστος" HorizontalAlignment="Left" Margin="14,303,0,-31" VerticalAlignment="Top"/>
-        <TextBox x:Name="ApCost" HorizontalAlignment="Left" Height="23" Margin="98,301,0,-31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Όνομα" HorizontalAlignment="Left" Margin="23,166,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ημ/νία" HorizontalAlignment="Left" Margin="23,201,0,0" VerticalAlignment="Top"/>
+        <Label Content="Θεραπεία" HorizontalAlignment="Left" Margin="6,236,0,0" VerticalAlignment="Top"/>
+        <Label Content="Έναρξη" HorizontalAlignment="Left" Margin="20,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.989"/>
+        <Label Content="Λήξη" HorizontalAlignment="Left" Margin="34,306,0,-34" VerticalAlignment="Top" RenderTransformOrigin="0.613,1.025"/>
+        <TextBox x:Name="ApName" HorizontalAlignment="Left" Height="29" Margin="98,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="ApName_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="ApDate" HorizontalAlignment="Left" Height="23" Margin="98,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="ApTreatment" HorizontalAlignment="Left" Height="23" Margin="98,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="ApStart" HorizontalAlignment="Left" Height="23" Margin="98,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="ApEnd" HorizontalAlignment="Left" Height="21" Margin="98,304,0,-34" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.841" IsEnabled="False"/>
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="274" Margin="251,57,-608,-31" VerticalAlignment="Top" Width="657"/>
+        <Label Content="Κόστος" HorizontalAlignment="Left" Margin="20,341,0,-69" VerticalAlignment="Top"/>
+        <TextBox x:Name="ApCost" HorizontalAlignment="Left" Height="23" Margin="98,339,0,-69" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="362,14,-139,0" VerticalAlignment="Top"/>
         <TextBox x:Name="ApSearch" HorizontalAlignment="Left" Height="23" Margin="472,14,-292,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="ApSearch_TextChanged_1"/>
-        <Button x:Name="Add" Content="Προσθήκη" HorizontalAlignment="Left" Margin="110,351,0,-81" VerticalAlignment="Top" Width="96" Click="Add_Click_1" IsEnabled="False"/>
-        <Button x:Name="ApEdit" Content="Επεξεργασία" HorizontalAlignment="Left" Margin="251,351,-53,-81" VerticalAlignment="Top" Width="102" Click="ApEdit_Click"/>
-        <Button x:Name="Completed" Content="Ολοκληρώθηκε" HorizontalAlignment="Left" Margin="749,351,-571,-81" VerticalAlignment="Top" Width="122" Click="Completed_Click"/>
-        <Label Content="Επώνυμο" HorizontalAlignment="Left" Margin="2,95,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ApLast" HorizontalAlignment="Left" Height="23" Margin="98,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="45,59,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ApID" HorizontalAlignment="Left" Height="23" Margin="98,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="ApSearchID" Content="SearchID" HorizontalAlignment="Left" Margin="2,351,0,-81" VerticalAlignment="Top" Width="85" Click="Button_Click"/>
+        <Button x:Name="Add" Content="Προσθήκη" HorizontalAlignment="Left" Margin="112,394,0,-124" VerticalAlignment="Top" Width="96" Click="Add_Click_1" IsEnabled="False"/>
+        <Button x:Name="ApEdit" Content="Επεξεργασία" HorizontalAlignment="Left" Margin="251,394,-55,-124" VerticalAlignment="Top" Width="104" Click="ApEdit_Click" RenderTransformOrigin="0.509,1.031"/>
+        <Button x:Name="Completed" Content="Ολοκληρώθηκε" HorizontalAlignment="Left" Margin="786,394,-608,-124" VerticalAlignment="Top" Width="122" Click="Completed_Click"/>
+        <Label Content="Επώνυμο" HorizontalAlignment="Left" Margin="8,131,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ApLast" HorizontalAlignment="Left" Height="23" Margin="98,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="51,96,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.754"/>
+        <TextBox x:Name="ApID" HorizontalAlignment="Left" Height="23" Margin="98,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="AppID" HorizontalAlignment="Left" Height="23" Margin="98,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="APPID" HorizontalAlignment="Left" Margin="28,61,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ApSearchID" Content="SearchID" HorizontalAlignment="Left" Margin="8,394,0,-124" VerticalAlignment="Top" Width="79" Click="ApSearchID_Click"/>
+        <Button x:Name="AppEditOK" Content="Αναβάθμιση" HorizontalAlignment="Left" Margin="398,394,-203,-124" VerticalAlignment="Top" Width="105" IsEnabled="False" Click="AppEditOK_Click"/>
 
     </Grid>
 </Page>
