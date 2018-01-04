@@ -66,6 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="addUser.xaml.cs">
+      <DependentUpon>addUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Clients\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
     <Compile Include="Reminder\Remindme.xaml.cs">
       <DependentUpon>Remindme.xaml</DependentUpon>
     </Compile>
+    <Page Include="addUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Clients\Window1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
