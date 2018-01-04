@@ -50,11 +50,12 @@ namespace PhysioProject2
                 con.Open();
             //Clients.Cname, Appointments.AppDate, Appointments.TreatmentOrTherapy, Appointments.AppPrice
             cmd.Connection = con;
-            cmd.CommandText = "SELECT Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID)";
+            cmd.CommandText = "SELECT Appointments.AID, Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID)";
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
             DataGrid1.ItemsSource = dt.AsDataView();
+            
 
 
         }
@@ -128,28 +129,45 @@ namespace PhysioProject2
                 MessageBox.Show("Δεν συμπληρώσατε όλα τα παραπάνω στοιχεία");
 
             }
+            ApTreatment.IsEnabled = false;
+            ApStart.IsEnabled = false;
+            ApEnd.IsEnabled = false;
+            ApCost.IsEnabled = false;
+            ApDate.IsEnabled = false ;
 
-        
+            ApID.IsEnabled = true;
 
         }
 
         private void ApEdit_Click(object sender, RoutedEventArgs e)
         {
+
+            
             if (DataGrid1.SelectedItems.Count > 0)
             {
+                ApTreatment.IsEnabled = true;
+                ApStart.IsEnabled = true;
+                ApEnd.IsEnabled = true;
+                ApCost.IsEnabled = true;
+                ApDate.IsEnabled = true;
+                ApID.IsEnabled = false;
+                Add.IsEnabled = true;
                 DataRowView row = (DataRowView)DataGrid1.SelectedItems[0];
+                ApID.Text = row["CID"].ToString();
+                ApLast.Text = row["Surname"].ToString();
                 ApName.Text = row["Name"].ToString();
                 ApDate.Text = row["AppDate"].ToString();
                 ApTreatment.Text = row["TreatmentOrTherapy"].ToString();
                 ApStart.Text = row["AppTime"].ToString();
                 ApEnd.Text = row["AppEndTime"].ToString();
                 ApCost.Text = row["AppPrice"].ToString();
-
+                
             }
             else
             {
                 MessageBox.Show("Παρακαλώ επιλέξτε ένα πελάτη από τη λίστα...");
             }
+            
         }
 
         private void Completed_Click(object sender, RoutedEventArgs e)
@@ -180,20 +198,28 @@ namespace PhysioProject2
             dv.RowFilter = string.Format("Surname LIKE '{0}*'", ApName.Text);
             DataGrid1.ItemsSource = dv;
         }
-
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OleDbCommand cmd = new OleDbCommand();
             string selectQuery = "SELECT * FROM Clients WHERE CID=" + (ApID.Text);
-            
+            if (ApID.Text != "") { 
             cmd.Connection = con;
             cmd = new OleDbCommand(selectQuery, con);
             odd = cmd.ExecuteReader();
-
+           
             if (odd.Read())
             {
                 ApName.Text = odd["Name"].ToString();
                 ApLast.Text = odd["Surname"].ToString();
+                ApTreatment.IsEnabled = true;
+                ApStart.IsEnabled = true;
+                ApEnd.IsEnabled = true;
+                ApCost.IsEnabled = true;
+                ApDate.IsEnabled = true;
+
+
+
                 Add.IsEnabled = true;
             }
             else
@@ -208,6 +234,15 @@ namespace PhysioProject2
                 ApCost.Text = "";
 
                 MessageBox.Show("Δεν Υπάρχει Εγγραφή με αυτό το ID");
+
+            }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Τοποθέτησε το ID του πελάτη για να προχωρήσεις");
+
 
             }
 
