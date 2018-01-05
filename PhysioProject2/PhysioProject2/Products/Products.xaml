@@ -15,13 +15,11 @@
         </Grid.Background>
         <Border BorderBrush="Black" BorderThickness="2">
         </Border>
-        <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox Name="SearchProductsTB" HorizontalAlignment="Left" Height="18" Margin="118,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
-        <Label Content="ΠΡΟΙΟΝΤΑ&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="108" Foreground="White"/>
-        <StackPanel HorizontalAlignment="Left" Height="255"  Margin="371,0,0,0" VerticalAlignment="Top" Width="590">
-            <DataGrid BorderBrush="Black"  BorderThickness="2" x:Name="ProductsDataGrid"  Height="auto"  Width="auto"/>
-        </StackPanel>
-        <Button Content="Προσθήκη" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="101" Click="Button_Click" Margin="156,6,0,0"/>
+        <Label Content="Αναζήτηση" HorizontalAlignment="Left" FontSize="16" Margin="24,73,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Name="SearchProductsTB" FontSize="16" HorizontalAlignment="Left" Height="18" Margin="118,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
+        <Label Content="ΠΡΟΙΟΝΤΑ" FontSize="40" HorizontalAlignment="Left" Height="Auto" Margin="10,5,0,0" VerticalAlignment="Top" Width="Auto" Foreground="White"/>
+        <DataGrid x:Name="ProductsDataGrid" HeadersVisibility="None" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" BorderBrush="Black"  BorderThickness="2"   Height="Auto"  Width="Auto" Margin="25,153,0,0"/>
+        <Button Content="Προσθήκη" FontSize="16" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="101" Click="Button_Click" Margin="24,118,0,0"/>
 
     </Grid>
 </Page>

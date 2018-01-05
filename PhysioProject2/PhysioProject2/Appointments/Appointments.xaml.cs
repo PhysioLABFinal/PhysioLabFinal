@@ -249,6 +249,7 @@ namespace PhysioProject2
 
         private void ApSearchID_Click(object sender, RoutedEventArgs e)
         {
+			DataGrid1.Visibility = Visibility.Visible;
             OleDbCommand cmd = new OleDbCommand();
             string selectQuery = "SELECT * FROM Clients LEFT JOIN Appointments on Clients.CID = Appointments.CID WHERE Clients.CID=" + ApID.Text;
             if (ApID.Text != "")

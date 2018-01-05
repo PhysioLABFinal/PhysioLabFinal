@@ -54,6 +54,8 @@ namespace PhysioProject2
 		{
 			ClearAll();
 			MoreInfo.Visibility = Visibility.Visible;
+			clientsAppData.Visibility = Visibility.Hidden;
+			appointmentsLbl.Visibility = Visibility.Hidden;
 		}
 
 		private void ClearAll()
