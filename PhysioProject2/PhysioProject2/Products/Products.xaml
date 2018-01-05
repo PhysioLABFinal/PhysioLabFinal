@@ -8,12 +8,18 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Products" Height="auto" Width="auto">
 
-    <Grid Margin="0,0,-661,-94" >
-        <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top"/>
+    <Grid  >
+        <Grid.Background>
+            <ImageBrush ImageSource="..\\bg2.jpg" Stretch="UniformToFill"/>
+
+        </Grid.Background>
+        <Border BorderBrush="Black" BorderThickness="2">
+        </Border>
+        <Label Content="Αναζήτηση" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox Name="SearchProductsTB" HorizontalAlignment="Left" Height="18" Margin="118,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
-        <Label Content="ΠΡΟΙΟΝΤΑ&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="ΠΡΟΙΟΝΤΑ&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="108" Foreground="White"/>
         <StackPanel HorizontalAlignment="Left" Height="255"  Margin="371,0,0,0" VerticalAlignment="Top" Width="590">
-            <DataGrid  x:Name="ProductsDataGrid"  Height="auto"  Width="auto"/>
+            <DataGrid BorderBrush="Black"  BorderThickness="2" x:Name="ProductsDataGrid"  Height="auto"  Width="auto"/>
         </StackPanel>
         <Button Content="Προσθήκη" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="101" Click="Button_Click" Margin="156,6,0,0"/>
 

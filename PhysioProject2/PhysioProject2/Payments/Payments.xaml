@@ -8,6 +8,8 @@
       Title="Payments" Height="356.597">
 
     <Grid Margin="0,0,-115,0">
+       
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="49*"/>
@@ -26,7 +28,8 @@
             <Label x:Name="sunoloText" Content="0" HorizontalAlignment="Left" Margin="66,302,0,0" FontSize="16" VerticalAlignment="Top"/>
             <Button Content="Εκτύπωση" HorizontalAlignment="Left" Margin="234,302,0,0" VerticalAlignment="Top" Width="151" FontSize="16" Height="28" Click="Button_Click_2"/>
             <DataGrid x:Name="datagrid4" HorizontalAlignment="Left" Height="126" Margin="10,165,0,0" VerticalAlignment="Top" Width="375" HeadersVisibility="None"/>
+      
         </Grid>
-
+        
     </Grid>
 </Page>

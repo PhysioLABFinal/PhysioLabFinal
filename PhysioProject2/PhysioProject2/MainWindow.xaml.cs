@@ -23,6 +23,7 @@ namespace PhysioProject2
         public MainWindow()
         {
             InitializeComponent();
+            Main.Content = new Welcome();
         }
 
         private void client_button(object sender, RoutedEventArgs e)
@@ -61,6 +62,11 @@ namespace PhysioProject2
             
 
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Welcome();
         }
     }
 }

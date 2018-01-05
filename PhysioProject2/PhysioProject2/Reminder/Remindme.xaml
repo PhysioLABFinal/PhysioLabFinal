@@ -5,17 +5,23 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PhysioProject2.Reminder"
       mc:Ignorable="d"
-      Title="Remindme" Width="919" Height="482.3">
+      Title="Remindme" Width="Auto" Height="auto" >
 
-    <Grid>
+    <Grid  >
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="..\\bg2.jpg" Stretch="UniformToFill"/>
+            
+        </Grid.Background>
         <Button Content="Αποστολή" HorizontalAlignment="Left" Margin="100,158,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click"/>
-        <Label Content="Πληκτρολογίστε το Email και τον κωδικό σας.Πατώντας αποστολή θα λάβετε ένα Email με τα δεδομένα σας." HorizontalAlignment="Left" Margin="10,108,-396,0" VerticalAlignment="Top" Width="686"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="20,42,0,0" VerticalAlignment="Top"/>
+        <Label Content="Πληκτρολογίστε το Email και τον κωδικό σας.Πατώντας αποστολή θα λάβετε ένα Email με τα δεδομένα σας." HorizontalAlignment="Left" Margin="10,108,-396,0" VerticalAlignment="Top" Width="686" Foreground="White"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="20,42,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox HorizontalAlignment="Left" Name="MailTB" Height="23" Margin="100,42,-68,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
-        <Label Content="Κωδικός" HorizontalAlignment="Left" Margin="20,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Κωδικός" HorizontalAlignment="Left" Margin="20,82,0,0" VerticalAlignment="Top" Foreground="White"/>
         <PasswordBox HorizontalAlignment="Left" Name="PasswordTB" Margin="100,80,-68,0" VerticalAlignment="Top" Width="268"/>
         <ProgressBar Name="ProgressBar"  HorizontalAlignment="Left" Height="30" Margin="227,158,-27,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Μονο Gmail προσωρινά." HorizontalAlignment="Left" Margin="417,44,-288,0" VerticalAlignment="Top" Width="171"/>
-
+        <Label Content="Μονο Gmail προσωρινά." HorizontalAlignment="Left" Margin="417,44,-288,0" VerticalAlignment="Top" Width="171" Foreground="White"/>
+        <Border BorderBrush="Black" BorderThickness="2">
+        </Border>
     </Grid>
 </Page>

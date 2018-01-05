@@ -98,6 +98,9 @@
     <Compile Include="Reminder\Remindme.xaml.cs">
       <DependentUpon>Remindme.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
     <Page Include="addUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Products\Products.xaml.cs">
@@ -208,6 +215,7 @@
     <Resource Include="appIcon.ico" />
     <Resource Include="background.jpg" />
     <Resource Include="footer-background-01.jpg" />
+    <Resource Include="bg2.jpg" />
     <Content Include="PhysioDatabase.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
