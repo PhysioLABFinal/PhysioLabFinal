@@ -207,6 +207,7 @@
     <Resource Include="Themes\Metro\HowToApplyTheme.txt" />
     <Resource Include="appIcon.ico" />
     <Resource Include="background.jpg" />
+    <Resource Include="footer-background-01.jpg" />
     <Content Include="PhysioDatabase.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

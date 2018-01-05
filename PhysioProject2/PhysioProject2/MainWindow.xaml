@@ -9,6 +9,7 @@
         WindowStyle="ThreeDBorderWindow"
         Title="PhysioLab" Height="Auto" Width="Auto" Icon="appIcon.ico">
     <Grid>
+        
         <StackPanel  Orientation="Horizontal" Height="100" VerticalAlignment="Top">
             <StackPanel.Background>
                 <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill"/>
@@ -23,7 +24,15 @@
 
         </StackPanel>
 
-        <Frame Background="AliceBlue" x:Name="Main" Margin="0,100,0,0"  NavigationUIVisibility="Hidden"/>
+        <StackPanel  Name="FooterPanel" Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="footer-background-01.jpg" Stretch="UniformToFill"/>
+            </StackPanel.Background>
+            <Label VerticalAlignment="Top" Foreground="White" FontFamily="Yu Gothic UI Semibold" >Physio Team</Label>
+            <Label FontSize="14" FontWeight="Bold" Foreground="White" FontFamily="Yu Gothic UI Semibold" Content="All Rights Reserved, PhysioTherapy Lab 2017" VerticalAlignment="Bottom" HorizontalAlignment="Left" Padding="5" Grid.IsSharedSizeScope="True"/>
+        </StackPanel>
+
+        <Frame Background="AliceBlue" x:Name="Main" Margin="0,100,0,50"  NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>
