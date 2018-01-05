@@ -19,7 +19,7 @@
             <Button Content="Πελάτες" MinWidth="110" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
             <Button Content="Προϊόντα" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" Height="30" FontSize="16"></Button>
             <Button Content="Ραντεβού" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" Height="30" FontSize="16"></Button>
-            <Button Content="Πληρωμές" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" Height="30" FontSize="16"></Button>
+            <Button Content="Πληρωμές"  MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" Height="30" FontSize="16"></Button>
             <Button Content="BackUp" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" FontSize="16" Click="Button_Click"></Button>
 
             <Button Content="Οδηγίες Χρήσης" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  Height="30" FontSize="16"/>
