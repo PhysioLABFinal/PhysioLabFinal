@@ -9,7 +9,13 @@
       Title="Remindme">
 
     <Grid>
-        <Button x:Name="BtnSend" Width="200" Height="200" Background="Yellow" Content="Send" Click="BtnSend_Click"/>
+        <Button Content="?p?st???" HorizontalAlignment="Left" Margin="100,158,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click"/>
+        <Label Content="?at?ste t? ???µp? ??a ?a ste??ete st? Email sa? ??a ta ded?µ??a t?? ί?s?? ded?µ???? sa?." HorizontalAlignment="Left" Margin="10,108,-325,0" VerticalAlignment="Top" Width="615"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="20,42,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="MailTB" Height="23" Margin="100,42,-68,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
+        <Label Content="??d????" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top"/>
+        <PasswordBox HorizontalAlignment="Left" Name="PasswordTB" Margin="100,80,-68,0" VerticalAlignment="Top" Width="268"/>
+        <ProgressBar Name="ProgressBar"  HorizontalAlignment="Left" Height="30" Margin="227,158,-27,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Page>

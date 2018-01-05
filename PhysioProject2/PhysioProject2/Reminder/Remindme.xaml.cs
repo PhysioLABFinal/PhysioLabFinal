@@ -22,68 +22,45 @@ namespace PhysioProject2.Reminder
     /// </summary>
     public partial class Remindme : Page
     {
+
         public Remindme()
         {
             InitializeComponent();
             
         }
+     
 
+       
 
-
-        private void BtnSend_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            using (MailMessage mail = new MailMessage())
             {
+                ProgressBar.Value = 0;
+                mail.From = new MailAddress(MailTB.Text);
+                mail.To.Add(MailTB.Text);
+                mail.Subject = "Hello World";
+                mail.Body = "<h1>Hello</h1>";
+                mail.IsBodyHtml = true;
+                mail.Attachments.Add(new Attachment(".\\PhysioDatabase.accdb"));
+                ProgressBar.Value = 40;
 
-                MailMessage mail = new MailMessage();
-                //put your SMTP address and port here.
-                SmtpClient SmtpServer = new SmtpClient("");
-                //Put the email address
-                mail.From = new MailAddress("");
-                //Put the email where you want to send.
-                mail.To.Add("");
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    ProgressBar.Value = 70;
 
-
-                mail.Subject = "CheckoutPOS Exception Log";
-
-                StringBuilder sbBody = new StringBuilder();
-
-                sbBody.AppendLine("Hi Dev Team,");
-
-                sbBody.AppendLine("Something went wrong with CheckoutPOS");
-
-                sbBody.AppendLine("Here is the error log:");
-
-                sbBody.AppendLine("Exception: Object reference not set to an instance of an object....");
-
-                sbBody.AppendLine("Thanks,");
-
-                mail.Body = sbBody.ToString();
-
-                MessageBox.Show("Test2");
-
-                //Your log file path
-                System.Net.Mail.Attachment attachment = new System.Net.Mail.Attachment(@".\\PhysioDatabase.accdb");
-
-                mail.Attachments.Add(attachment);
-                MessageBox.Show("Test1");
-
-
-                //Your username and password!
-                SmtpServer.Credentials = new System.Net.NetworkCredential("", "");
-                //Set Smtp Server port
-                MessageBox.Show("connected");
-
-                SmtpServer.Port = 25;
-                //SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(mail);
-                MessageBox.Show("The exception has been sent! :)");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
+                    string myemail = MailTB.Text;
+                    string mypassword = PasswordTB.Password.ToString();
+                    smtp.Credentials = new NetworkCredential(myemail, mypassword);
+                   
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    MessageBox.Show("?p?st??? ep?t????, pa?a?a?? e????te t? Email sa? ");
+                    ProgressBar.Value = 100;
+                }
             }
         }
     }
+        
 }
+    
