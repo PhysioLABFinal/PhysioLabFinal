@@ -159,7 +159,22 @@ namespace PhysioProject2
                 ApStart.Text = row["AppTime"].ToString();
                 ApEnd.Text = row["AppEndTime"].ToString();
                 ApCost.Text = row["AppPrice"].ToString();
-                
+
+                //ΣΗΜΑΝΤΙΚΟ-- ΟΤΑΝ ΚΑΝΟΥΜΕ ΑΛΛΑΓΕΣ ΣΤΗΝ DATAGRID, ΜΕΡΙΚΕΣ ΦΟΡΕΣ ΘΕΛΕΙ ΑΝΑΝΕΩΣΕΙ ΓΙΑΤΙ ΚΑΝΕΙ UNBIND ΤΟ DATASOURCE. ΓΙΑ ΝΑ ΤΟ ΚΑΝΟΥΜΕ ΑΥΤΟ
+                // ΚΑΝΟΥΜΕ ITEMSOURCE=NULL, KAI META ΕΠΙΣΤΡΟΦΗ ΣΤΟ ΚΑΝΟΝΙΚΟ.
+
+                OleDbCommand cmd = new OleDbCommand();
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                //Clients.Cname, Appointments.AppDate, Appointments.TreatmentOrTherapy, Appointments.AppPrice
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT Appointments.AID, Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID) WHERE AppStatus='pending'";
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+                DataGrid1.ItemsSource = null;
+                DataGrid1.ItemsSource = dt.AsDataView();
+
             }
             else
             {
