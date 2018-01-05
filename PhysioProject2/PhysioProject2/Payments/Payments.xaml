@@ -4,16 +4,29 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PhysioProject2"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="Payments">
+      mc:Ignorable="d" d:DesignWidth="300"
+      Title="Payments" Height="356.597">
 
-    <Grid>
-        <Label Content="Πληρωμές" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-        <DataGrid HorizontalAlignment="Left" Height="77" Margin="19,67,0,0" VerticalAlignment="Top" Width="234"/>
-        <Label Content="Εκκρεμής" HorizontalAlignment="Left" Margin="19,41,0,0" VerticalAlignment="Top"/>
-        <Label Content="Εξωφλημένες" HorizontalAlignment="Left" Margin="19,170,0,0" VerticalAlignment="Top"/>
-        <DataGrid HorizontalAlignment="Left" Height="77" Margin="19,201,0,0" VerticalAlignment="Top" Width="234"/>
-        <Button Content="Καταστατικό Μήνα" HorizontalAlignment="Left" Margin="139,19,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click"/>
+    <Grid Margin="0,0,-115,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Πληρωμές" FontSize="40" HorizontalAlignment="Left" Margin="4,-111,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="datagrid1" HorizontalAlignment="Left" Height="Auto" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="16" Width="375" HeadersVisibility="None" />
+        <Label Content="Εκκρεμής" HorizontalAlignment="Left" Margin="4,-43,0,0" VerticalAlignment="Top" FontSize="16" />
+        <Label Content="Εξόφλημένες" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1"/>
+        <DataGrid x:Name="datagrid2" HorizontalAlignment="Left" Height="Auto" Margin="10,157,0,0" VerticalAlignment="Top" FontSize="16" Width="375" HeadersVisibility="None" Grid.Row="1"/>
+        <Button Content="Καταστατικό Μήνα" HorizontalAlignment="Left" Margin="237,-83,-1,0" VerticalAlignment="Top" FontSize="16" Height="28" Width="179" Click="Button_Click"/>
+        <Button Content="Εξόφληση" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" Height="28" Width="100" Click="Button_Click_1" Grid.Row="1"/>
+        <Grid x:Name="katastatikomina" HorizontalAlignment="Left" Height="356" Margin="525,-108,-503,0" VerticalAlignment="Top" Width="393" Visibility="Hidden" Grid.RowSpan="2">
+            <Label Content="Καταστατικό Μήνα" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="18"/>
+            <DataGrid x:Name="datagrid3" HorizontalAlignment="Left" Height="132" Margin="10,28,0,0" VerticalAlignment="Top" Width="373" HeadersVisibility="None"/>
+            <Label Content="Σύνολο:" HorizontalAlignment="Left" Margin="10,302,0,0" FontSize="16" VerticalAlignment="Top"/>
+            <Label x:Name="sunoloText" Content="0" HorizontalAlignment="Left" Margin="66,302,0,0" FontSize="16" VerticalAlignment="Top"/>
+            <Button Content="Εκτύπωση" HorizontalAlignment="Left" Margin="234,302,0,0" VerticalAlignment="Top" Width="151" FontSize="16" Height="28" Click="Button_Click_2"/>
+            <DataGrid x:Name="datagrid4" HorizontalAlignment="Left" Height="126" Margin="10,165,0,0" VerticalAlignment="Top" Width="375" HeadersVisibility="None"/>
+        </Grid>
+
     </Grid>
 </Page>
