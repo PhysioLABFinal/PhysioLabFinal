@@ -39,8 +39,9 @@ namespace PhysioProject2.Reminder
                 ProgressBar.Value = 0;
                 mail.From = new MailAddress(MailTB.Text);
                 mail.To.Add(MailTB.Text);
-                mail.Subject = "Hello World";
-                mail.Body = "<h1>Hello</h1>";
+                
+                mail.Subject = "BackUp βάσης δεδομένων ";
+                mail.Body = "<h1>Σας έχουμε επισυνάψει το αρχείο της βάσης δεδομένων σας</h1>";
                 mail.IsBodyHtml = true;
                 mail.Attachments.Add(new Attachment(".\\PhysioDatabase.accdb"));
                 ProgressBar.Value = 40;
@@ -48,15 +49,17 @@ namespace PhysioProject2.Reminder
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
                     ProgressBar.Value = 70;
+                    
 
                     string myemail = MailTB.Text;
                     string mypassword = PasswordTB.Password.ToString();
                     smtp.Credentials = new NetworkCredential(myemail, mypassword);
                    
                     smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                    MessageBox.Show("?p?st??? ep?t????, pa?a?a?? e????te t? Email sa? ");
                     ProgressBar.Value = 100;
+                    smtp.Send(mail);
+                    MessageBox.Show("Επιτυχής αποστολή, παρακαλώ ελέγξτε το Email σας. ");
+                    
                 }
             }
         }

@@ -34,7 +34,7 @@ namespace PhysioProject2
             this.DataContext = this;
 
             con = new OleDbConnection();
-            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\\Users\\pangkratis\\Documents\\GitHub\\PhysioLabFinal\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
             BindGrid();
         }
 
