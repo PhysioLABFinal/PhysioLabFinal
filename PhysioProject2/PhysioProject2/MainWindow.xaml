@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhysioProject2"
         mc:Ignorable="d"
-        WindowState="Normal"
+        WindowState="Maximized"
         WindowStyle="ThreeDBorderWindow"
         Title="PhysioLab" Height="Auto" Width="Auto" Icon="appIcon.ico">
     <Grid>
@@ -15,7 +15,6 @@
                 <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill"/>
             </StackPanel.Background>
             <Button Content="Aρχική" MinWidth="110" Margin="10,0,0,0" Click="Button_Click_1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
-
             <Button Content="Πελάτες" MinWidth="110" Margin="10,0,0,0" Click="client_button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" FontSize="16"></Button>
             <Button Content="Προϊόντα" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="products_button" Height="30" FontSize="16"></Button>
             <Button Content="Ραντεβού" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="appointm_button" Height="30" FontSize="16"></Button>
