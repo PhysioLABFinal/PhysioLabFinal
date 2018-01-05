@@ -265,13 +265,13 @@ namespace PhysioProject2
         private void ApSearchID_Click(object sender, RoutedEventArgs e)
         {
 			DataGrid1.Visibility = Visibility.Visible;
-            OleDbCommand cmd = new OleDbCommand();
+            OleDbCommand cmdd = new OleDbCommand();
             string selectQuery = "SELECT * FROM Clients LEFT JOIN Appointments on Clients.CID = Appointments.CID WHERE Clients.CID=" + ApID.Text;
             if (ApID.Text != "")
             {
-                cmd.Connection = con;
-                cmd = new OleDbCommand(selectQuery, con);
-                odd = cmd.ExecuteReader();
+                cmdd.Connection = con;
+                cmdd = new OleDbCommand(selectQuery, con);
+                odd = cmdd.ExecuteReader();
 
                 if (odd.Read())
                 {
@@ -287,6 +287,23 @@ namespace PhysioProject2
 
 
                     Add.IsEnabled = true;
+                    //--------------------------------------------------------------------------
+                    //ΣΗΜΑΝΤΙΚΟ-- ΟΤΑΝ ΚΑΝΟΥΜΕ ΑΛΛΑΓΕΣ ΣΤΗΝ DATAGRID, ΜΕΡΙΚΕΣ ΦΟΡΕΣ ΘΕΛΕΙ ΑΝΑΝΕΩΣΕΙ ΓΙΑΤΙ ΚΑΝΕΙ UNBIND ΤΟ DATASOURCE. ΓΙΑ ΝΑ ΤΟ ΚΑΝΟΥΜΕ ΑΥΤΟ
+                    // ΚΑΝΟΥΜΕ ITEMSOURCE=NULL, KAI META ΕΠΙΣΤΡΟΦΗ ΣΤΟ ΚΑΝΟΝΙΚΟ.
+
+                    OleDbCommand cmd = new OleDbCommand();
+                    if (con.State != ConnectionState.Open)
+                        con.Open();
+                    //Clients.Cname, Appointments.AppDate, Appointments.TreatmentOrTherapy, Appointments.AppPrice
+                    cmd.Connection = con;
+                    cmd.CommandText = "SELECT Appointments.AID, Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID) WHERE AppStatus='pending'";
+                    OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    DataGrid1.ItemsSource = null;
+                    DataGrid1.ItemsSource = dt.AsDataView();
+
+
                 }
                 else
                 {
