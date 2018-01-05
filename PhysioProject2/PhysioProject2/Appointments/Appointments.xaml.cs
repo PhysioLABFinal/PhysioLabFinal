@@ -310,7 +310,7 @@ namespace PhysioProject2
 
             {
 
-                cmd.CommandText = "update Appointments set AppDate='" + ApDate.Text + "',AppTime='" + ApStart.Text + "',AppEndTime='" + ApEnd.Text + "',AppPrice='" + ApCost.Text + "',ApTreatmentOrTherapy='" + ApTreatment.Text +"' where AID=" + AppID.Text;
+                cmd.CommandText = "update Appointments set AppDate='" + ApDate.Text + "',AppTime='" + ApStart.Text + "',AppEndTime='" + ApEnd.Text + "',AppPrice='" + ApCost.Text + "',TreatmentOrTherapy='" + ApTreatment.Text +"' where AID=" + AppID.Text;
                 cmd.ExecuteNonQuery();
                 BindGrid();
                 MessageBox.Show("Οι αλλαγές έγιναν με επιτυχία!!");
