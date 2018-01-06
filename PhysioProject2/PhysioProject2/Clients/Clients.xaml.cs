@@ -158,7 +158,7 @@ namespace PhysioProject2
 					BindGrid();
                    
 
-                    MessageBox.Show("Ο νέος πελάτης προστέθηκε με επιτυχία!!");
+                    MessageBox.Show("Ο πελάτης προστέθηκε με επιτυχία!!");
 
                     ClearAll();
 				}

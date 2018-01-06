@@ -119,7 +119,7 @@ namespace PhysioProject2
                     cmd.CommandText = "insert into Appointments(CID,AppDate,AppTime,AppEndTime,AppPrice,AppStatus,TreatmentOrTherapy) Values('" + ApID.Text + "','" + ApDate.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "','pending','" + ApTreatment.Text + "')";
                     cmd.ExecuteNonQuery();
                     BindGrid();
-                    MessageBox.Show("Ο πελάτης προστέθηκε με επιτυχία!!");
+                    MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");
                     ClearAll();
                     Add.IsEnabled = false;
 
@@ -178,7 +178,7 @@ namespace PhysioProject2
             }
             else
             {
-                MessageBox.Show("Παρακαλώ επιλέξτε ένα πελάτη από τη λίστα...");
+                MessageBox.Show("Παρακαλώ επιλέξτε ένα ραντεβού από τη λίστα...");
             }
             
         }
