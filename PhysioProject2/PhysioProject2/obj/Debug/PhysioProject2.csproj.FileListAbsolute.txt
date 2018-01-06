@@ -259,3 +259,5 @@ C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Reminder\Reminder.baml
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Reminder\Remindme.baml
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Welcome.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Documentation.baml
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Documentation.g.cs

@@ -158,8 +158,12 @@ namespace PhysioProject2
 				productCompanyTxt.Text = row["Company"].ToString();
 				productPriceTxt.Text = row["PricePerUnit"].ToString();
 
-				
-			}
+
+
+
+
+
+            }
 			else
 			{
 				MessageBox.Show("Παρακαλώ επιλέξτε ένα προιόν πελάτη από τη λίστα...");
@@ -186,6 +190,7 @@ namespace PhysioProject2
 			OleDbDataAdapter da = new OleDbDataAdapter(cmd);
 			dt = new DataTable();
 			da.Fill(dt);
+            ordersGrid.ItemsSource = null;
 			ordersGrid.ItemsSource = dt.AsDataView();
 
 			ordersGrid.Columns[1].Visibility = Visibility.Hidden;

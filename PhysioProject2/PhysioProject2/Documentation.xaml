@@ -15,5 +15,6 @@
         </Grid.Background>
         <Border BorderBrush="Black" BorderThickness="2">
         </Border>
+        <Label Foreground="White">Σελιδα Οδηγιων</Label>
     </Grid>
 </Page>
