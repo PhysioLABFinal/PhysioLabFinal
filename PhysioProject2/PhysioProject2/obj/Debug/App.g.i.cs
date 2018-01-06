@@ -58,7 +58,7 @@ namespace PhysioProject2 {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/PhysioProject2;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PhysioLab;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
