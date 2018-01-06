@@ -21,7 +21,7 @@
             <Button Content="Πληρωμές"  MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="payments_button" Height="30" FontSize="16"></Button>
             <Button Content="BackUp" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" FontSize="16" Click="Button_Click"></Button>
 
-            <Button Content="Οδηγίες Χρήσης" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  Height="30" FontSize="16"/>
+            <Button x:Name="docuclick" Content="Οδηγίες Χρήσης" MinWidth="110" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  Height="30" FontSize="16" Click="docuclick_Click"/>
 
         </StackPanel>
 

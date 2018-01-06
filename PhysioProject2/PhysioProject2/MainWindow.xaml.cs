@@ -68,5 +68,10 @@ namespace PhysioProject2
         {
             Main.Content = new Welcome();
         }
+
+        private void docuclick_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Documentation();
+        }
     }
 }
