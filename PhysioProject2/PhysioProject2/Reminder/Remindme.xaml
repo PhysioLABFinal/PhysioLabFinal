@@ -14,14 +14,15 @@
             
         </Grid.Background>
         <Button Content="Αποστολή" HorizontalAlignment="Left" Margin="100,158,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click"/>
-        <Label Content="Πληκτρολογίστε το Email και τον κωδικό σας.Πατώντας αποστολή θα λάβετε ένα Email με τα δεδομένα σας." HorizontalAlignment="Left" Margin="10,108,-396,0" VerticalAlignment="Top" Width="686" Foreground="White"/>
+        <Label Content="Πληκτρολογίστε το Email και τον κωδικό σας.Πατώντας αποστολή θα λάβετε ένα Email με τα δεδομένα σας." HorizontalAlignment="Left" Margin="10,125,-284,0" VerticalAlignment="Top" Width="686" Foreground="White"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="20,42,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox HorizontalAlignment="Left" Name="MailTB" Height="23" Margin="100,42,-68,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
         <Label Content="Κωδικός" HorizontalAlignment="Left" Margin="20,82,0,0" VerticalAlignment="Top" Foreground="White"/>
         <PasswordBox HorizontalAlignment="Left" Name="PasswordTB" Margin="100,80,-68,0" VerticalAlignment="Top" Width="268"/>
         <ProgressBar Name="ProgressBar"  HorizontalAlignment="Left" Height="30" Margin="227,158,-27,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Μονο Gmail προσωρινά." HorizontalAlignment="Left" Margin="417,44,-288,0" VerticalAlignment="Top" Width="171" Foreground="White"/>
         <Border BorderBrush="Black" BorderThickness="2">
         </Border>
+        <ComboBox Name="Combo" HorizontalAlignment="Left" Margin="576,42,-284,0" VerticalAlignment="Top" Width="120" SelectionChanged="Combo_SelectionChanged"/>
+        <Label Content="Επιλεξτε Provider" HorizontalAlignment="Left" Margin="449,42,-149,0" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Page>

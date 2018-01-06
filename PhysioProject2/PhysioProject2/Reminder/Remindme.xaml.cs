@@ -26,14 +26,50 @@ namespace PhysioProject2.Reminder
         public Remindme()
         {
             InitializeComponent();
-            
-        }
-     
+            Combo.Items.Add("Gmail");
+            Combo.Items.Add("Yahoo");
+            Combo.Items.Add("Hotmail");
+            Combo.Items.Add("Outlook");
 
-       
+
+        }
+
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string smtpClient = "";
+            if (Combo.Text=="Gmail")
+
+            {
+                smtpClient = "smtp.gmail.com";
+                
+            }
+            else if (Combo.Text=="Yahoo")
+            {
+                smtpClient = "smtp.mail.yahoo.com";
+
+            }
+
+            else if (Combo.Text == "Hotmail")
+            {
+
+                smtpClient = "smtp.live.com";
+
+            }
+
+            else if (Combo.Text=="Outlook")
+            {
+                smtpClient = "smtp-mail.outlook.com";
+
+            }
+
+            else
+            {
+                MessageBox.Show("Η υπηρεσια Email που επιλεξατε δεν υπάρχει");
+            }
+
             using (MailMessage mail = new MailMessage())
             {
                 ProgressBar.Value = 0;
@@ -46,7 +82,7 @@ namespace PhysioProject2.Reminder
                 mail.Attachments.Add(new Attachment(".\\PhysioDatabase.accdb"));
                 ProgressBar.Value = 40;
 
-                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                using (SmtpClient smtp = new SmtpClient(smtpClient, 587))
                 {
                     ProgressBar.Value = 70;
                     
@@ -62,6 +98,11 @@ namespace PhysioProject2.Reminder
                     
                 }
             }
+        }
+
+        private void Combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
         
