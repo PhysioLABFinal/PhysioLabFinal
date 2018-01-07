@@ -116,12 +116,21 @@ namespace PhysioProject2
             
 
             { 
-                    cmd.CommandText = "insert into Appointments(CID,AppDate,AppTime,AppEndTime,AppPrice,AppStatus,TreatmentOrTherapy) Values('" + ApID.Text + "','" + ApDate.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "','pending','" + ApTreatment.Text + "')";
-                    cmd.ExecuteNonQuery();
-                    BindGrid();
-                    MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");
-                    ClearAll();
-                    Add.IsEnabled = false;
+                cmd.CommandText = "insert into Appointments(CID,AppDate,AppTime,AppEndTime,AppPrice,AppStatus,TreatmentOrTherapy) Values(" + ApID.Text + ",'" + ApDate.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "','pending','" + ApTreatment.Text + "')";
+                cmd.ExecuteNonQuery();
+                BindGrid();
+
+				cmd = new OleDbCommand();
+				if (con.State != ConnectionState.Open)
+					con.Open();
+				cmd.Connection = con;
+
+				cmd.CommandText = "insert into Payments(CID,Status,AID) Values(" + ApID.Text + ",'pending'," + AppID.Text + ")";
+				cmd.ExecuteNonQuery();
+
+				MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");
+                ClearAll();
+                Add.IsEnabled = false;
 
             }
             else
