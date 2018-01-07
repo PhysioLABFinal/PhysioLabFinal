@@ -60,7 +60,7 @@ namespace PhysioProject2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             katastatikomina.Visibility = Visibility.Visible;
-
+            prosthiki.Visibility = Visibility.Hidden;
             String sDate = DateTime.Now.ToString();
             DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
 
@@ -123,7 +123,7 @@ namespace PhysioProject2
                 {
                     String price = row["FinalPrice"].ToString();
                     dt2.ImportRow(row);
-                    totalprice = totalprice + Int32.Parse(price);
+                    totalprice = totalprice - Int32.Parse(price);
                 }
                     
             }
@@ -135,7 +135,7 @@ namespace PhysioProject2
         {
             if (datagrid1.SelectedItems.Count > 0)
             {
-                DataRowView row = (DataRowView)datagrid1.SelectedItems[0];
+                DataRowView row = (DataRowView)datagrid1.SelectedItem;
                 String payid = row["PayID"].ToString();
                 String status = row["Status"].ToString();
 
@@ -144,7 +144,7 @@ namespace PhysioProject2
                         con.Open();
                     cmd.Connection = con;
 
-                    cmd.CommandText = "update Payments set Status = 'Paid'  where Payid = payid";
+                    cmd.CommandText = "update Payments set Status = 'Paid'  where Payid = "+payid;
                     OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                     dt = new DataTable();
                     da.Fill(dt);
@@ -170,5 +170,48 @@ namespace PhysioProject2
                 Printdlg.PrintVisual(datagrid3, Title);
             }
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            prosthiki.Visibility = Visibility.Visible;
+            katastatikomina.Visibility = Visibility.Hidden;
+
+            pr_onoma.Text = "";
+            pr_epitheto.Text = "";
+            pr_date.Text = "";
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            
+            
+
+            OleDbCommand cmd = new OleDbCommand();
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            cmd.Connection = con;
+
+            cmd.CommandText = "select Clients.CID,Appointments.AID from Appointments inner join Clients on Appointments.CID=Clients.CID where Clients.Name=@onoma and Clients.Surname=@epitheto and Appointments.AppDate=@date";
+            cmd.Parameters.Add("onoma", SqlDbType.VarChar).Value = pr_onoma.Text;
+            cmd.Parameters.Add("epitheto", SqlDbType.VarChar).Value = pr_epitheto.Text;
+            cmd.Parameters.Add("date", SqlDbType.VarChar).Value = pr_date.Text;
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            String client_id, app_id;
+            foreach (DataRow row in dt.Rows)
+            {
+                client_id = row["CID"].ToString();
+                app_id = row["AID"].ToString();
+
+                cmd.CommandText = "insert into Payments(CID,OrderID,ProID,Status,VisaCheckCash,AID) Values ("+Int32.Parse(client_id)+",null,null,'Not Paid',Visa,"+ Int32.Parse(app_id) + ")";
+                cmd.ExecuteNonQuery();
+                BindGrid();
+
+            }
+
+            
+        }
+
     }
 }
