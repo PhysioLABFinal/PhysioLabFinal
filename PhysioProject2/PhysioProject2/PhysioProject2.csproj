@@ -216,6 +216,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README_PhysioLAb.docx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Themes\Metro\HowToApplyTheme.txt" />

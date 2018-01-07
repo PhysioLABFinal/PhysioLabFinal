@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
+
 
 namespace PhysioProject2
 {
@@ -23,6 +25,11 @@ namespace PhysioProject2
         public Documentation()
         {
             InitializeComponent();
+            string pathh = "PhysioDatabse.accdb";
+            Process wordProcess = new Process();
+            wordProcess.StartInfo.FileName =pathh;
+            wordProcess.StartInfo.UseShellExecute = true;
+            wordProcess.Start();
         }
     }
 }
