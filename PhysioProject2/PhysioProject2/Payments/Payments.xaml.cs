@@ -45,13 +45,13 @@ namespace PhysioProject2
                 con.Open();
             cmd.Connection = con;
             
-            cmd.CommandText = "select Clients.Cname,Clients.CSurname,Appointments.AppPrice,Payments.Status,Payments.PayID from ((Payments inner join Appointments on Payments.AID=Appointments.AID) inner join Clients on Payments.CID=Clients.CID) where Status<>'Paid'";
+            cmd.CommandText = "select Clients.Name,Clients.Surname,Appointments.AppPrice,Payments.Status,Payments.PayID from ((Payments inner join Appointments on Payments.AID=Appointments.AID) inner join Clients on Payments.CID=Clients.CID) where Status<>'Paid'";
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
             datagrid1.ItemsSource = dt.AsDataView();
 
-            cmd.CommandText = "select Clients.Cname,Clients.CSurname,Appointments.AppPrice,Payments.Status,Payments.PayID from ((Payments inner join Appointments on Payments.AID=Appointments.AID) inner join Clients on Payments.CID=Clients.CID) where Status='Paid'";
+            cmd.CommandText = "select Clients.Name,Clients.Surname,Appointments.AppPrice,Payments.Status,Payments.PayID from ((Payments inner join Appointments on Payments.AID=Appointments.AID) inner join Clients on Payments.CID=Clients.CID) where Status='Paid'";
             da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
@@ -73,7 +73,7 @@ namespace PhysioProject2
                 con.Open();
             cmd.Connection = con;
 
-            cmd.CommandText = "select Clients.Cname,Clients.CSurname,Appointments.AppDate,Appointments.AppPrice from Appointments inner join Clients on Appointments.CID=Clients.CID";
+            cmd.CommandText = "select Clients.Name,Clients.Surname,Appointments.AppDate,Appointments.AppPrice from Appointments inner join Clients on Appointments.CID=Clients.CID";
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
@@ -85,7 +85,11 @@ namespace PhysioProject2
                 date.Split();
                 string[] datearray = date.Split('/');
                 int x = Int32.Parse(datearray[1]);
-                int y = Int32.Parse(datearray[2]);
+
+                string[] timestamp_split = datearray[2].Split(' ');
+                int y = Int32.Parse(timestamp_split[0]);
+
+
                 if (x == month & y == year)
                 {
                     String price = row["AppPrice"].ToString();
@@ -95,7 +99,7 @@ namespace PhysioProject2
             }
             datagrid3.ItemsSource = dt2.AsDataView();    
 
-            cmd.CommandText = "select Products.Name,Products.Company,Orders.FinalPrice,Orders.OrderDate from Orders inner join Products on Orders.ProID=Products.ProID";
+            cmd.CommandText = "select Products.Name,Products.Company,Orders.OrderDate,Orders.FinalPrice from Orders inner join Products on Orders.ProID=Products.ProID";
             da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
@@ -109,8 +113,12 @@ namespace PhysioProject2
                 
                 date.Split();
                 string[] datearray = date.Split('/');
-                int x = Int32.Parse(datearray[1]);
-                int y = Int32.Parse(datearray[2]);
+                int x = Int32.Parse(datearray[0]);
+
+                string[] timestamp_split = datearray[2].Split(' ');
+                int y = Int32.Parse(timestamp_split[0]);
+
+
                 if (x == month & y == year)
                 {
                     String price = row["FinalPrice"].ToString();
