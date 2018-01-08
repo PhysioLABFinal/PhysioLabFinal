@@ -34,7 +34,7 @@ namespace PhysioProject2
             this.DataContext = this;
 
             con = new OleDbConnection();
-            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=..\\..\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
             BindGrid();
         }
 
@@ -86,6 +86,7 @@ namespace PhysioProject2
             dt2 = dt.Clone();
             foreach (DataRow row in dt.Rows)
             {
+                
                 String date = row["AppDate"].ToString();
                 date.Split();
                 string[] datearray = date.Split('/');
