@@ -297,7 +297,7 @@ namespace PhysioProject2
 						con.Open();
 					cmd.Connection = con;
 
-					cmd.CommandText = "insert into Payments(CID,Status,AID) Values(" + ApID.Text + ",'pending'," + AppID.Text + ")";
+					cmd.CommandText = "insert into Payments(CID,Status) Values(" + ApID.Text + ",'pending')";
 					cmd.ExecuteNonQuery();
 
 					MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");
@@ -330,6 +330,28 @@ namespace PhysioProject2
 			DataGrid1.Columns[7].Visibility = Visibility.Hidden;
 			DataGrid1.Columns[8].Visibility = Visibility.Hidden;
 			DataGrid1.Columns[9].Header = "Τιμή";
+		}
+
+		private void ApDelete_Click(object sender, RoutedEventArgs e)
+		{
+			if (DataGrid1.SelectedItems.Count > 0)
+			{
+				DataRowView row = (DataRowView)DataGrid1.SelectedItems[0];
+
+				OleDbCommand cmd = new OleDbCommand();
+				if (con.State != ConnectionState.Open)
+					con.Open();
+				cmd.Connection = con;
+				cmd.CommandText = "delete from Appointments where AID=" + row["AID"].ToString();
+				cmd.ExecuteNonQuery();
+				BindGrid();
+				MessageBox.Show("Το ραντεβού διαγράφηκε με επιτυχία!!");
+				ClearAll();
+			}
+			else
+			{
+				MessageBox.Show("Παρακαλώ επιλέξτε ένα ραντεβού από τη λίστα...");
+			}
 		}
 	}
 }
