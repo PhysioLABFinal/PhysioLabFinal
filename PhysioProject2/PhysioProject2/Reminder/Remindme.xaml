@@ -19,10 +19,10 @@
         <TextBox HorizontalAlignment="Left" Name="MailTB" Height="23" Margin="100,42,-68,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
         <Label Content="Κωδικός" HorizontalAlignment="Left" Margin="20,82,0,0" VerticalAlignment="Top" Foreground="White"/>
         <PasswordBox HorizontalAlignment="Left" Name="PasswordTB" Margin="100,80,-68,0" VerticalAlignment="Top" Width="268"/>
-        <ProgressBar Name="ProgressBar"  HorizontalAlignment="Left" Height="30" Margin="227,158,-27,0" VerticalAlignment="Top" Width="100"/>
         <Border BorderBrush="Black" BorderThickness="2">
         </Border>
         <ComboBox Name="Combo" HorizontalAlignment="Left" Margin="576,42,-284,0" VerticalAlignment="Top" Width="120" SelectionChanged="Combo_SelectionChanged"/>
         <Label Content="Επιλεξτε Provider" HorizontalAlignment="Left" Margin="449,42,-149,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="WaitLBL" Content="Μία Στιγμή..." HorizontalAlignment="Left" Margin="242,158,0,0" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Page>

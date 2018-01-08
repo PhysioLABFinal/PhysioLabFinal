@@ -25,7 +25,7 @@ namespace PhysioProject2
         public Documentation()
         {
             InitializeComponent();
-            string pathh = "PhysioDatabse.accdb";
+            string pathh = "..\\..\\README_PhysioLAb.docx";
             Process wordProcess = new Process();
             wordProcess.StartInfo.FileName =pathh;
             wordProcess.StartInfo.UseShellExecute = true;

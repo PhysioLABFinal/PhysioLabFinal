@@ -30,6 +30,7 @@ namespace PhysioProject2.Reminder
             Combo.Items.Add("Yahoo");
             Combo.Items.Add("Hotmail");
             Combo.Items.Add("Outlook");
+            WaitLBL.Visibility =Visibility.Hidden;
 
 
         }
@@ -39,6 +40,7 @@ namespace PhysioProject2.Reminder
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            WaitLBL.Visibility = Visibility.Visible;
             string smtpClient = "";
             if (Combo.Text=="Gmail")
 
@@ -72,30 +74,42 @@ namespace PhysioProject2.Reminder
 
             using (MailMessage mail = new MailMessage())
             {
-                ProgressBar.Value = 0;
-                mail.From = new MailAddress(MailTB.Text);
-                mail.To.Add(MailTB.Text);
-                
-                mail.Subject = "BackUp βάσης δεδομένων ";
-                mail.Body = "<h1>Σας έχουμε επισυνάψει το αρχείο της βάσης δεδομένων σας</h1>";
-                mail.IsBodyHtml = true;
-                mail.Attachments.Add(new Attachment(".\\PhysioDatabase.accdb"));
-                ProgressBar.Value = 40;
+               
 
-                using (SmtpClient smtp = new SmtpClient(smtpClient, 587))
+               
+
+                try
                 {
-                    ProgressBar.Value = 70;
-                    
 
-                    string myemail = MailTB.Text;
-                    string mypassword = PasswordTB.Password.ToString();
-                    smtp.Credentials = new NetworkCredential(myemail, mypassword);
-                   
-                    smtp.EnableSsl = true;
-                    ProgressBar.Value = 100;
-                    smtp.Send(mail);
-                    MessageBox.Show("Επιτυχής αποστολή, παρακαλώ ελέγξτε το Email σας. ");
-                    
+                    mail.From = new MailAddress(MailTB.Text);
+                    mail.To.Add(MailTB.Text);
+
+                    mail.Subject = "BackUp βάσης δεδομένων ";
+                    mail.Body = "<h1>Σας έχουμε επισυνάψει το αρχείο της βάσης δεδομένων σας</h1>";
+                    mail.IsBodyHtml = true;
+                    mail.Attachments.Add(new Attachment(".\\PhysioDatabase.accdb"));
+                    using (SmtpClient smtp = new SmtpClient(smtpClient, 587))
+                    {
+
+
+
+                        string myemail = MailTB.Text;
+                        string mypassword = PasswordTB.Password.ToString();
+                        smtp.Credentials = new NetworkCredential(myemail, mypassword);
+
+                        smtp.EnableSsl = true;
+
+                        smtp.Send(mail);
+                        MessageBox.Show("Επιτυχής αποστολή, παρακαλώ ελέγξτε το Email σας. ");
+                        WaitLBL.Visibility = Visibility.Hidden;
+
+                    }
+
+
+                }
+                catch {
+                    MessageBox.Show("Λαθος Ονομα/Κωδικος");
+
                 }
             }
         }
