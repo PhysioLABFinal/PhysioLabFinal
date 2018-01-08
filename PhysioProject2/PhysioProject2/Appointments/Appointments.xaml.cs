@@ -292,12 +292,15 @@ namespace PhysioProject2
 					cmd.ExecuteNonQuery();
 					BindGrid();
 
+					DataGrid1.SelectedIndex = DataGrid1.Items.Count - 1;
+					DataRowView row = (DataRowView)DataGrid1.SelectedItems[0];
+
 					cmd = new OleDbCommand();
 					if (con.State != ConnectionState.Open)
 						con.Open();
 					cmd.Connection = con;
 
-					cmd.CommandText = "insert into Payments(CID,Status) Values(" + ApID.Text + ",'pending')";
+					cmd.CommandText = "insert into Payments(CID,Status,AID) Values(" + ApID.Text + ",'pending'," + row["AID"].ToString() + ")";
 					cmd.ExecuteNonQuery();
 
 					MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");

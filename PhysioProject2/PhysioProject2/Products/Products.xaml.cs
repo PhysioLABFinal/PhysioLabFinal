@@ -218,7 +218,10 @@ namespace PhysioProject2
 			cmd.ExecuteNonQuery();
 			BindGrid();
 
-			cmd.CommandText = "insert into Payments(ProID,Status) Values(" + productIDTxt.Text + ",'pending')";
+			ordersGrid.SelectedIndex = ordersGrid.Items.Count - 1;
+			DataRowView row = (DataRowView)ordersGrid.SelectedItems[0];
+
+			cmd.CommandText = "insert into Payments(OrderID,ProID,Status) Values(" + row["OrderID"].ToString()+ "," + productIDTxt.Text + ",'pending')";
 			cmd.ExecuteNonQuery();
 
 			MessageBox.Show("Η παραγγελία προστέθηκε με επιτυχία!!");
