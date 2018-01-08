@@ -39,7 +39,8 @@ namespace PhysioProject2
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=.\\PhysioDatabase.accdb"; //" + AppDomain.CurrentDomain.BaseDirectory + "
             BindGrid();
 
-
+			moreinfo.Visibility = Visibility.Hidden;
+			ApSearchID.Visibility = Visibility.Hidden;
         }
 
 
@@ -56,29 +57,7 @@ namespace PhysioProject2
             da.Fill(dt);
             DataGrid1.ItemsSource = dt.AsDataView();
             
-
-
         }
-
-
-        private void SearchTxt_GotFocus(object sender, RoutedEventArgs e)
-        {
-            ApSearch.Text = "";
-        }
-
-        /* private void rep_bind()
-         {
-             String query = "Select * from Clients where Name like'" + ApName.Text + "%'";
-
-             OleDbDataAdapter da = new OleDbDataAdapter(query, con);
-             DataSet ds = new DataSet();
-             da.Fill(ds);
-
-
-
-         }
-         */
-
 
         private void ClearAll()
         {
@@ -92,7 +71,8 @@ namespace PhysioProject2
             ApDate.Text = "";
             ApCost.Text = "";
 
-
+			moreinfo.Visibility = Visibility.Hidden;
+			ApSearchID.Visibility = Visibility.Hidden;
         }
 
 
@@ -106,91 +86,56 @@ namespace PhysioProject2
 
         private void Add_Click_1(object sender, RoutedEventArgs e)
         {
-            OleDbCommand cmd = new OleDbCommand();
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            cmd.Connection = con;
-
-          
-            if (ApTreatment.Text!="" && ApStart.Text != "" && ApEnd.Text != "" && ApDate.Text != "" && ApCost.Text != "")
-            
-
-            { 
-                cmd.CommandText = "insert into Appointments(CID,AppDate,AppTime,AppEndTime,AppPrice,AppStatus,TreatmentOrTherapy) Values(" + ApID.Text + ",'" + ApDate.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "','pending','" + ApTreatment.Text + "')";
-                cmd.ExecuteNonQuery();
-                BindGrid();
-
-				cmd = new OleDbCommand();
-				if (con.State != ConnectionState.Open)
-					con.Open();
-				cmd.Connection = con;
-
-				cmd.CommandText = "insert into Payments(CID,Status,AID) Values(" + ApID.Text + ",'pending'," + AppID.Text + ")";
-				cmd.ExecuteNonQuery();
-
-				MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");
-                ClearAll();
-                Add.IsEnabled = false;
-
-            }
-            else
-            {
-                
-                MessageBox.Show("Δεν συμπληρώσατε όλα τα παραπάνω στοιχεία");
-
-            }
-            
+			moreinfo.Visibility = Visibility.Visible;
+			ApSearchID.Visibility = Visibility.Visible;
             ApID.IsEnabled = true;
-
         }
 
         private void ApEdit_Click(object sender, RoutedEventArgs e)
         {
+			moreinfo.Visibility = Visibility.Visible;
 
-            
-            if (DataGrid1.SelectedItems.Count > 0)
-            {
-                AppEditOK.IsEnabled = true;
-                ApTreatment.IsEnabled = true;
-                ApStart.IsEnabled = true;
-                ApEnd.IsEnabled = true;
-                ApCost.IsEnabled = true;
-                ApDate.IsEnabled = true;
-                ApID.IsEnabled = false;
-               
-                DataRowView row = (DataRowView)DataGrid1.SelectedItems[0];
-                AppID.Text = row["AID"].ToString();
-                ApID.Text = row["CID"].ToString();
-                ApLast.Text = row["Surname"].ToString();
-                ApName.Text = row["Name"].ToString();
-                ApDate.Text = row["AppDate"].ToString();
-                ApTreatment.Text = row["TreatmentOrTherapy"].ToString();
-                ApStart.Text = row["AppTime"].ToString();
-                ApEnd.Text = row["AppEndTime"].ToString();
-                ApCost.Text = row["AppPrice"].ToString();
+			if (DataGrid1.SelectedItems.Count > 0)
+			{
+				ApTreatment.IsEnabled = true;
+				ApStart.IsEnabled = true;
+				ApEnd.IsEnabled = true;
+				ApCost.IsEnabled = true;
+				ApDate.IsEnabled = true;
+				ApID.IsEnabled = false;
 
-                //ΣΗΜΑΝΤΙΚΟ-- ΟΤΑΝ ΚΑΝΟΥΜΕ ΑΛΛΑΓΕΣ ΣΤΗΝ DATAGRID, ΜΕΡΙΚΕΣ ΦΟΡΕΣ ΘΕΛΕΙ ΑΝΑΝΕΩΣΕΙ ΓΙΑΤΙ ΚΑΝΕΙ UNBIND ΤΟ DATASOURCE. ΓΙΑ ΝΑ ΤΟ ΚΑΝΟΥΜΕ ΑΥΤΟ
-                // ΚΑΝΟΥΜΕ ITEMSOURCE=NULL, KAI META ΕΠΙΣΤΡΟΦΗ ΣΤΟ ΚΑΝΟΝΙΚΟ.
+				DataRowView row = (DataRowView)DataGrid1.SelectedItems[0];
+				AppID.Text = row["AID"].ToString();
+				ApID.Text = row["CID"].ToString();
+				ApLast.Text = row["Surname"].ToString();
+				ApName.Text = row["Name"].ToString();
+				ApDate.Text = row["AppDate"].ToString();
+				ApTreatment.Text = row["TreatmentOrTherapy"].ToString();
+				ApStart.Text = row["AppTime"].ToString();
+				ApEnd.Text = row["AppEndTime"].ToString();
+				ApCost.Text = row["AppPrice"].ToString();
 
-                OleDbCommand cmd = new OleDbCommand();
-                if (con.State != ConnectionState.Open)
-                    con.Open();
-                //Clients.Cname, Appointments.AppDate, Appointments.TreatmentOrTherapy, Appointments.AppPrice
-                cmd.Connection = con;
-                cmd.CommandText = "SELECT Appointments.AID, Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID) WHERE AppStatus='pending'";
-                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-                dt = new DataTable();
-                da.Fill(dt);
-                DataGrid1.ItemsSource = null;
-                DataGrid1.ItemsSource = dt.AsDataView();
+				//ΣΗΜΑΝΤΙΚΟ-- ΟΤΑΝ ΚΑΝΟΥΜΕ ΑΛΛΑΓΕΣ ΣΤΗΝ DATAGRID, ΜΕΡΙΚΕΣ ΦΟΡΕΣ ΘΕΛΕΙ ΑΝΑΝΕΩΣΕΙ ΓΙΑΤΙ ΚΑΝΕΙ UNBIND ΤΟ DATASOURCE. ΓΙΑ ΝΑ ΤΟ ΚΑΝΟΥΜΕ ΑΥΤΟ
+				// ΚΑΝΟΥΜΕ ITEMSOURCE=NULL, KAI META ΕΠΙΣΤΡΟΦΗ ΣΤΟ ΚΑΝΟΝΙΚΟ.
 
-            }
-            else
-            {
-                MessageBox.Show("Παρακαλώ επιλέξτε ένα ραντεβού από τη λίστα...");
-            }
-            
-        }
+				OleDbCommand cmd = new OleDbCommand();
+				if (con.State != ConnectionState.Open)
+					con.Open();
+				//Clients.Cname, Appointments.AppDate, Appointments.TreatmentOrTherapy, Appointments.AppPrice
+				cmd.Connection = con;
+				cmd.CommandText = "SELECT Appointments.AID, Clients.CID, Clients.Name, Clients.Surname, Appointments.AppDate, Appointments.AppTime, Appointments.AppEndTime, Clients.Telephone ,Appointments.TreatmentOrTherapy, Appointments.AppPrice FROM (Clients INNER JOIN Appointments on Clients.CID = Appointments.CID) WHERE AppStatus='pending'";
+				OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+				dt = new DataTable();
+				da.Fill(dt);
+				DataGrid1.ItemsSource = null;
+				DataGrid1.ItemsSource = dt.AsDataView();
+
+			}
+			else
+			{
+				MessageBox.Show("Παρακαλώ επιλέξτε ένα ραντεβού από τη λίστα...");
+			}
+		}
 
         private void Completed_Click(object sender, RoutedEventArgs e)
         {
@@ -240,10 +185,6 @@ namespace PhysioProject2
                 ApEnd.IsEnabled = true;
                 ApCost.IsEnabled = true;
                 ApDate.IsEnabled = true;
-
-
-
-                Add.IsEnabled = true;
             }
             else
             {
@@ -284,7 +225,6 @@ namespace PhysioProject2
 
                 if (odd.Read())
                 {
-                    AppID.Text = odd["AID"].ToString();
                     ApName.Text = odd["Name"].ToString();
                     ApLast.Text = odd["Surname"].ToString();
                     ApTreatment.IsEnabled = true;
@@ -293,9 +233,6 @@ namespace PhysioProject2
                     ApCost.IsEnabled = true;
                     ApDate.IsEnabled = true;
 
-
-
-                    Add.IsEnabled = true;
                     //--------------------------------------------------------------------------
                     //ΣΗΜΑΝΤΙΚΟ-- ΟΤΑΝ ΚΑΝΟΥΜΕ ΑΛΛΑΓΕΣ ΣΤΗΝ DATAGRID, ΜΕΡΙΚΕΣ ΦΟΡΕΣ ΘΕΛΕΙ ΑΝΑΝΕΩΣΕΙ ΓΙΑΤΙ ΚΑΝΕΙ UNBIND ΤΟ DATASOURCE. ΓΙΑ ΝΑ ΤΟ ΚΑΝΟΥΜΕ ΑΥΤΟ
                     // ΚΑΝΟΥΜΕ ITEMSOURCE=NULL, KAI META ΕΠΙΣΤΡΟΦΗ ΣΤΟ ΚΑΝΟΝΙΚΟ.
@@ -347,23 +284,39 @@ namespace PhysioProject2
                 con.Open();
             cmd.Connection = con;
 
-            if (ApName!=null)
+			if (ApName.Text != "" && ApLast.Text != "" && ApDate.Text != "" && ApCost.Text != "" && ApTreatment.Text != "" && ApStart.Text != "" && ApEnd.Text != "")
+			{
+				if (AppID.Text == "")
+				{
+					cmd.CommandText = "insert into Appointments(CID,AppDate,AppTime,AppEndTime,AppPrice,AppStatus,TreatmentOrTherapy) Values(" + ApID.Text + ",'" + ApDate.Text + "','" + ApStart.Text + "','" + ApEnd.Text + "','" + ApCost.Text + "','pending','" + ApTreatment.Text + "')";
+					cmd.ExecuteNonQuery();
+					BindGrid();
 
+					cmd = new OleDbCommand();
+					if (con.State != ConnectionState.Open)
+						con.Open();
+					cmd.Connection = con;
 
-            {
+					cmd.CommandText = "insert into Payments(CID,Status,AID) Values(" + ApID.Text + ",'pending'," + AppID.Text + ")";
+					cmd.ExecuteNonQuery();
 
-                cmd.CommandText = "update Appointments set AppDate='" + ApDate.Text + "',AppTime='" + ApStart.Text + "',AppEndTime='" + ApEnd.Text + "',AppPrice='" + ApCost.Text + "',TreatmentOrTherapy='" + ApTreatment.Text +"' where AID=" + AppID.Text;
-                cmd.ExecuteNonQuery();
-                BindGrid();
-                MessageBox.Show("Οι αλλαγές έγιναν με επιτυχία!!");
-                ClearAll();
-            }
-            else
-            {
-                MessageBox.Show("Δεν συμπλήρώσατε τα παραπάνω στοιχεία");
-            }
-          
-        }
+					MessageBox.Show("Το ραντεβού προστέθηκε με επιτυχία!!");
+					ClearAll();
+				}
+				else
+				{
+					cmd.CommandText = "update Appointments set AppDate='" + ApDate.Text + "',AppTime='" + ApStart.Text + "',AppEndTime='" + ApEnd.Text + "',AppPrice='" + ApCost.Text + "',TreatmentOrTherapy='" + ApTreatment.Text + "' where AID=" + AppID.Text;
+					cmd.ExecuteNonQuery();
+					BindGrid();
+					MessageBox.Show("Οι αλλαγές έγιναν με επιτυχία!!");
+					ClearAll();
+				}
+			}
+			else
+			{
+				MessageBox.Show("Δεν συμπλήρώσατε τα παραπάνω στοιχεία");
+			}
+		}
 
 		private void DataGrid1_AutoGeneratedColumns(object sender, EventArgs e)
 		{

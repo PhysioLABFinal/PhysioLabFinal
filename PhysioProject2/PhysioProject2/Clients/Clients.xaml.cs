@@ -44,12 +44,6 @@ namespace PhysioProject2
 			ClientdataGrid.ItemsSource = dt.AsDataView();
         }
 
-		private void SearchTxt_GotFocus(object sender, RoutedEventArgs e)
-        {
-            SearchTxt.Text = "";
-        }
-
-
 		private void addClient_Click(object sender, RoutedEventArgs e)
 		{
 			ClearAll();
