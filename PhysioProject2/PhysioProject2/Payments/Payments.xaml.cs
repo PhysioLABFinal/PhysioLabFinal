@@ -89,12 +89,14 @@ namespace PhysioProject2
                 
                 String date = row["AppDate"].ToString();
                 date.Split();
-                string[] datearray = date.Split('/');
-                int x = Int32.Parse(datearray[1]);
+                try
+                {
+                    string[] datearray = date.Split('/');
+                    int x = Int32.Parse(datearray[1]);
 
-                string[] timestamp_split = datearray[2].Split(' ');
-                int y = Int32.Parse(timestamp_split[0]);
-
+                    string[] timestamp_split = datearray[2].Split(' ');
+                    int y = Int32.Parse(timestamp_split[0]);
+              
 
                 if (x == month & y == year)
                 {
@@ -102,7 +104,14 @@ namespace PhysioProject2
                     dt2.ImportRow(row);
                     totalprice = totalprice + Int32.Parse(price);
                 }
+                }
+                catch
+                {
+
+                    MessageBox.Show("Εχετε εισαγει λαθος εγγραφη στην ημερομηνια καποιου ραντεβου παρακαλω ελεξτε");
+                }
             }
+
             datagrid3.ItemsSource = dt2.AsDataView();    
 
             cmd.CommandText = "select Products.Name,Products.Company,Orders.OrderDate,Orders.FinalPrice from Orders inner join Products on Orders.ProID=Products.ProID";
