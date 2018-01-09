@@ -103,11 +103,7 @@ C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\
 C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.Properties.Resources.resources
 C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.csproj.GenerateResource.Cache
 C:\Users\Marianna\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.csproj.CoreCompileInputs.cache
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\PhysioDatabase.accdb
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.csprojResolveAssemblyReference.cache
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\WPFToolkit.dll
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Metro.MSControls.Core.Implicit.baml
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Metro.MSControls.Toolkit.Implicit.baml
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Themes\Metro\Styles.Shared.baml
@@ -243,9 +239,6 @@ C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Documentation.g.cs
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Documentation.g.cs
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\Documentation.baml
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\PhysioProject2.exe.config
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\PhysioProject2.exe
-C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\bin\Debug\PhysioProject2.pdb
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2_Content.g.cs
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2_MarkupCompile.cache
 C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2_MarkupCompile.lref
@@ -263,3 +256,10 @@ C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.Properties.Resources.resources
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.exe
 C:\Users\User\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\obj\Debug\PhysioProject2.pdb
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\PhysioDatabase.accdb
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\PhysioProject2.exe.config
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\PhysioProject2.exe
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\PhysioProject2.pdb
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\dimit\Documents\GitHub\PhysioLabFinal\PhysioProject2\PhysioProject2\WPFToolkit.dll
