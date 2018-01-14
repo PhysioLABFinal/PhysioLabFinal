@@ -124,6 +124,8 @@ namespace PhysioProject2
 			productNameTxt.Text = "";
 			productCompanyTxt.Text = "";
 			productNameTxt.Text = "";
+			productPriceTxt.Text = "";
+			quantityOrderTxt.Text = "";
 			moreInfo.Visibility = Visibility.Hidden;
 			ordersGrid.Visibility = Visibility.Hidden;
 			ordersLbl.Visibility = Visibility.Hidden;
