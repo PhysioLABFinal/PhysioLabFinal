@@ -17,10 +17,10 @@
             <RowDefinition Height="49*"/>
         </Grid.RowDefinitions>
         <Label Content="Πληρωμές" Foreground="White" FontSize="40" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <DataGrid x:Name="datagrid1" Margin="18,110,0,0" FontSize="16" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="650" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" Grid.Row="1" />
+        <DataGrid x:Name="datagrid1" Margin="18,110,0,0" FontSize="16" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="160" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" Grid.Row="1" />
         <Label Content="Εκκρεμείς"  Foreground="White" HorizontalAlignment="Left" Margin="12,65,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" />
         <Label Content="Εξοφλημένες"  Foreground="White" HorizontalAlignment="Left" Margin="16,328,0,-9" VerticalAlignment="Top" FontSize="16" Grid.Row="1"/>
-        <DataGrid x:Name="datagrid2" HorizontalAlignment="Left" Height="Auto" Margin="16,359,0,-22" VerticalAlignment="Top" FontSize="16" Width="Auto" Grid.Row="1" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="200" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" />
+        <DataGrid x:Name="datagrid2" HorizontalAlignment="Left" Height="Auto" Margin="16,359,0,-22" VerticalAlignment="Top" FontSize="16" Width="Auto" Grid.Row="1" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="160" Background="Blue" IsReadOnly="True" CanUserSortColumns="True" AlternatingRowBackground="White" AlternationCount="2" />
         <Button Content="Καταστατικό Μήνα" HorizontalAlignment="Left" Margin="206,65,0,0" VerticalAlignment="Top" FontSize="16" Height="28" Width="179" Click="Button_Click" Grid.Row="1"/>
         <Button Content="Εξόφληση" HorizontalAlignment="Left" Margin="18,275,0,0" VerticalAlignment="Top" FontSize="16" Height="28" Width="100" Click="Button_Click_1" Grid.Row="1"/>
         <Grid x:Name="prosthiki" Grid.RowSpan="2" Margin="716,1,-716,-1" Visibility="Hidden">
