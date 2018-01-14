@@ -145,7 +145,7 @@ namespace PhysioProject2
 				con.Open();
 			cmd.Connection = con;
 
-			if (clientNameTxt.Text != "" && clientSurnameTxt.Text != "" && clientBirthdayTxt.Text != "" && clientPhoneTxt.Text != "" && clientDoctorTxt.Text != "" && clientDiagnosisTxt.Text != "" && clientCommentsTxt.Text != "")
+			if (clientNameTxt.Text != "" && clientSurnameTxt.Text != "" && clientBirthdayTxt.Text != "" && clientPhoneTxt.Text != "" && clientDoctorTxt.Text != "" && clientDiagnosisTxt.Text != "")
 			{
 				if (clientIDTxt.Text == "")
 				{
